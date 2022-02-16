@@ -535,3 +535,13 @@ user-select: none;
     margin-left: 165px;
     background: var(--ptextcolor);
 }
+
+.transition-fade {
+  opacity: 1;
+  transition: .5s;
+  transform: translatec(0);
+}
+
+html.is-animating .transition-fade{
+  opacity: 0;
+}
