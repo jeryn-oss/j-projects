@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" style="--backgroundcolor: #323437; --basetext: #ffffff; --backgroundcolorlighter: #47484a; --ptextcolor: #b3b3b3; --secondarycolor: #69DCC1; --firstcolor: #DC6985;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeryn</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="/js/home.js"></script>
+    
+</head>
+<header class="page_progress">
+    <div class="header_arrows">
+        <i onclick="pageup()" class='page_arrow bx bx-chevron-left'></i>
+        <p class="page_index">01 / 04</p>
+        <i onclick="pagedown()" class='page_arrow bx bx-chevron-right'></i>
+
+    </div>
+    <div class="headerbuttons">
+        <i class='bx bx-mail-send'></i>
+        <i onclick="settingsview()" class='bx bx-cog'></i>
+    </div>
+</header>
+<div class="settings">
+    <div class="settingsnav">
+        <i onclick="settingsview()" class='bx bx-x' ></i>
+    </div>
+    <div class="settingscontent_holder">
+      <ul>
+        <li><p onclick="settingsbtn('theme')" class="settingsthemebtn activesettingsnav">Themes</p></li>
+        <li><p onclick="settingsbtn('custom')" class="settingscustombtn ">Custom</p></li> 
+        <li><p onclick="settingsbtn('donate')" class="settingsdonatebtn ">Donate</p></li> 
+      </ul>  
+      <div class="currentsettings">
+        <div class="colorsettings">
+            <div class="selected_color colors">
+                    <div class="colorboxes" style="background-color: var(--backgroundcolor);"></div>
+                    <div class="colorboxes" style="background-color: var(--backgroundcolorlighter);"></div>
+                    <div class="colorboxes" style="background-color: var(--basetext);"></div>
+                    <div class="colorboxes" style="background-color: var(--firstcolor);"></div>
+                    <div class="colorboxes" style="background-color: var(--ptextcolor);"></div>
+                    <div class="colorboxes" style="background-color: var(--secondarycolor);"></div>
+            </div>
+            <div class="color_holder">
+                <div class="colors">
+                    <div class="colorboxes" style="background-color: var(--backgroundcolor);"></div>
+                    <div class="colorboxes" style="background-color: var(--backgroundcolorlighter);"></div>
+                    <div class="colorboxes" style="background-color: var(--basetext);"></div>
+                    <div class="colorboxes" style="background-color: var(--firstcolor);"></div>
+                    <div class="colorboxes" style="background-color: var(--ptextcolor);"></div>
+                    <div class="colorboxes" style="background-color: var(--secondarycolor);"></div>
+                </div>
+                <div class="colors">
+                    <div class="colorboxes" style="background-color: var(--backgroundcolor);"></div>
+                    <div class="colorboxes" style="background-color: var(--backgroundcolorlighter);"></div>
+                    <div class="colorboxes" style="background-color: var(--basetext);"></div>
+                    <div class="colorboxes" style="background-color: var(--firstcolor);"></div>
+                    <div class="colorboxes" style="background-color: var(--ptextcolor);"></div>
+                    <div class="colorboxes" style="background-color: var(--secondarycolor);"></div>
+                </div>
+                <div class="colors">
+                    <div class="colorboxes" style="background-color: var(--backgroundcolor);"></div>
+                    <div class="colorboxes" style="background-color: var(--backgroundcolorlighter);"></div>
+                    <div class="colorboxes" style="background-color: var(--basetext);"></div>
+                    <div class="colorboxes" style="background-color: var(--firstcolor);"></div>
+                    <div class="colorboxes" style="background-color: var(--ptextcolor);"></div>
+                    <div class="colorboxes" style="background-color: var(--secondarycolor);"></div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div onclick="start()" class="pageup">
+    <i class='bx bxs-chevrons-up'></i>
+</div>
+<div onclick="end()" class="pagedown">
+    <i class='bx bxs-chevrons-down'></i>
+</div>
+<body>
+    <div class="page">
+        <div class="start_div">
+            <i class='bx bx-lock-open-alt'></i>
+            <button onclick="goTo('Projects')">Projects</button>
+        </div>
+    </div>
+    <div class="page page2">
+        <h1 class="purple">Hello there...</h1>
+        <p>My name is <span class="purple">Jeryn</span>, I am a <span class="purple">fifteen</span> year old software engineer from indiana with over 4.5 years experience to my name. I am fluent in languages spaning from javascript to python with more motivation and perseverance to learn a lot <span class="purple">more</span>.</p>
+        <button class="page2button buttonwitharrow">More info<i class='bx bxs-chevrons-right buttonarrow'></i></button>
+    </div> 
+    <div class="page3"> 
+        <div class="content_holder">
+            <div class="contentblock">
+                <h1 class="blue">Woah!, even more...</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum harum necessitatibus odit, maxime eligendi iste rem ut soluta magni illo perspiciatis, aliquid corporis ducimus quos, adipisci ullam dolores reiciendis dignissimos itaque doloribus recusandae earum. Eaque nisi deserunt voluptate repellendus voluptas eius aliquam vero atque, praesentium ipsa eligendi necessitatibus harum soluta!</p>
+                <button class="bluebutton">lorem</button>
+            </div>
+            <div class="contentblock">
+                <h1 class="blue">Secondly...</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum harum necessitatibus odit, maxime eligendi iste rem ut soluta magni illo perspiciatis, aliquid corporis ducimus quos, adipisci ullam dolores reiciendis dignissimos itaque doloribus recusandae earum. Eaque nisi deserunt voluptate repellendus voluptas eius aliquam vero atque, praesentium ipsa eligendi necessitatibus harum soluta!</p>
+                <button class="bluebutton">lorem</button>
+            </div>
+        </div>
+    </div>
+    <div class="page page4">
+        <div class="p4cardholder">
+            <div class="card">
+                <h1 class="purple">test</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id et quaerat labore magnam velit. Ullam temporibus voluptatem ipsa, accusantium in maxime architecto officia quibusdam mollitia deleniti labore reiciendis repudiandae nulla?</p>
+                <button class="purplebutton">test btn</button>
+            </div>
+            <div class="card">
+                <h1 class="purple">test</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id et quaerat labore magnam velit. Ullam temporibus voluptatem ipsa, accusantium in maxime architecto officia quibusdam mollitia deleniti labore reiciendis repudiandae nulla?</p>
+                <button class="purplebutton">test btn</button>
+            </div>
+            <div class="card">
+                <h1 class="purple">test</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id et quaerat labore magnam velit. Ullam temporibus voluptatem ipsa, accusantium in maxime architecto officia quibusdam mollitia deleniti labore reiciendis repudiandae nulla?</p>
+                <button class="purplebutton">test btn</button>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
