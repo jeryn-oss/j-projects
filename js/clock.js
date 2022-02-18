@@ -1,3 +1,4 @@
+import moment from "moment";
 const t = setInterval(clock, 1000);
 var period = 3
 var passing;
