@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeryn</title>
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/uni.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="/js/home.js"></script>
-    <script defer src="/node_modules/swup/dist/swup.min.js"></script>
-    <script defer src="/js/trans.js" ></script>
 </head>
 <header class="page_progress">
     <div class="header_arrows">
@@ -80,11 +79,11 @@
 <div onclick="end()" class="pagedown">
     <i class='bx bxs-chevrons-down'></i>
 </div>
-<body id="swup" class="transition-fade">
+<body>
     <div class="page">
         <div class="start_div">
             <i class='bx bx-lock-open-alt'></i>
-            <a href="/pages/projects.html"><button>Projects</button></a>
+            <button onclick="goToPage('end')">Projects</button>
             
         </div>
     </div>
@@ -110,9 +109,9 @@
     <div class="page page4">
         <div class="p4cardholder">
             <div class="card">
-                <h1 class="purple">test</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id et quaerat labore magnam velit. Ullam temporibus voluptatem ipsa, accusantium in maxime architecto officia quibusdam mollitia deleniti labore reiciendis repudiandae nulla?</p>
-                <button class="purplebutton">test btn</button>
+                <h1 class="purple">schedule</h1>
+                <p>An easy user friendly online bell schedule</p>
+                <a href="schedule.html"><button class="purplebutton">schedule</button></a>
             </div>
             <div class="card">
                 <h1 class="purple">test</h1>

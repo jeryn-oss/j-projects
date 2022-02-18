@@ -122,6 +122,17 @@ function end(){
     setpage();
 }
 
-function goTo(pagename){
-    window.location = '/pages/'+ pagename +'.html';
+function goToPage(pagenum){
+    if(pagenum <= maxpage && pagenum >=1){
+        if(page == 1){
+
+        }else{
+            page = pagenum
+            setpage();
+        }
+    }
+    else if(pagenum == 'end'){
+        end();
+    }
 }
+
