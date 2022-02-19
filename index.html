@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hse schedule</title>
+    <meta name="description" content="Hse schedule app">
     <link rel="stylesheet" href="/css/uni.css">
     <link rel="stylesheet" href="/css/clock.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -38,14 +39,12 @@
                 <div class="period3 periodcircles">3</div>
                 <div class="period4 periodcircles">4</div>
             </div>
-            
             <div class="day" id="day2">
                 <div class="period5 periodcircles">5</div>
                 <div class="period6 periodcircles">6</div>
                 <div class="period7 periodcircles">7</div>
                 <div class="period8 periodcircles">8</div>
             </div>
-            
         </div>
         <h2>Lunch:</h2>
         <div id="lunchholder">
@@ -54,14 +53,13 @@
             <div onclick="lunchfunc('c');"  class="lunchc lunchbtn hoveraffect periodcircles">c</div>
             <div onclick="lunchfunc('d');"  class="lunchd lunchbtn hoveraffect periodcircles">d</div>
         </div>
-
         <div class="clockbar">
             <div class="clockprogress">
         </div>
         </div>
         </div>
     </div>
-    <div id="pickerholder">
+    <div class="pickerholder">
         <div class="currentcolor"></div>
         <div class="colorstuff">
             <div class="colorholder">
@@ -73,14 +71,16 @@
                 <div onclick="setColor('#43f14c')" class="colorcircle colorcircle6" title="#43f14c" ></div>
                 <div onclick="setColor('#800080')" class="colorcircle colorcircle7" title="#800080" ></div>
                 <div onclick="setColor('#008080')" class="colorcircle colorcircle8" title="#008080" ></div>
-                <div onclick="setColor('#ff6347')" class="colorcircle colorcircle9" title="#ff6347" ></div>
-                <div onclick="setColor('#ff6347')" class="colorcircle colorcircle10" title="#ff6347" ></div>
-                <div onclick="setColor('#ff6347')" class="colorcircle colorcircle11" title="#ff6347" ></div>
-                <div onclick="setColor('#ff6347')" class="colorcircle colorcircle12" title="#ff6347" ></div>
+                <div onclick="setColor('#808080')" class="colorcircle colorcircle9" title="#808080" ></div>
+                <div onclick="setColor('#0b360b')" class="colorcircle colorcircle10" title="#0b360b" ></div>
+                <div onclick="setColor('#2de7ce')" class="colorcircle colorcircle11" title="#2de7ce" ></div>
+                <div onclick="setColor('#ffc400')" class="colorcircle colorcircle12" title="#ffc400" ></div>
             </div>
             <div id='picker'></div>
         </div>
     </div>
+    <div onclick="opencolor()" class="colorbtn">
+        <i class='bx bx-cog'></i>
+    </div>
 </body>
-
 </html>

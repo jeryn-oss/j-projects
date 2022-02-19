@@ -1,14 +1,18 @@
-var time;
+var currentcolor = $('html').css('--firstcolor')
 var colorPicker = new iro.ColorPicker('#picker', {
     width: 150,
-    color: $('html').css('--firstcolor')
+    color: currentcolor
 });
 $(function(){
     for(var i = 1; i<= 12; i++){
         $('.colorcircle'+i).css('background', $('.colorcircle'+i).prop('title'))
     }
 });
-
+colorPicker.on('color:change', function(color) {
+    // log the current color as a HEX string
+    setColor(color.hexString);
+  });
+var time;
 const t = setInterval(clock, 1000);
 var period = 0;
 var Passing;
@@ -360,11 +364,13 @@ function updatescreen(p,time,l,msg){
     }
     if(day == 0 || endofday == true){
         $('#clock').css('display', 'none');
+        $('#time-till-end').css('color', $('html').css('--firstcolor'))
         $('#time-till-end').css('font-size', '50px');
         if(!$('.time-till-end').hasClass('end')){
             $('#time-till-end').addClass('end')
         }
     }else{
+        $('#time-till-end').css('color', $('html').css('--basetext'))
         $('#clock').css('display', 'flex');
         $('#time-till-end').css('font-size', '32px');
         $('#time-till-end').removeClass('end')
@@ -621,9 +627,6 @@ function secondAfy(hour,min,sec,a){
     var y = (min * 60);
     var z = sec;
     var f = (parseInt(x,10) + parseInt(y,10) + parseInt(z,10));
-    if(a == 'pm'){
-        console.log(f)
-    }
     return (f);
 }
 
@@ -661,4 +664,18 @@ function clockAfy(timein){
 
 function setColor(hex){
     $('html').css('--firstcolor', hex)
+    var currentcolor = hex
+}
+
+var colorview = 0;
+function opencolor(){
+    if(colorview == 0){
+        $('.colorbtn').addClass('active');
+        $('.pickerholder').addClass('active');
+        colorview = 1;
+    }else{
+        $('.colorbtn').removeClass('active');
+        $('.pickerholder').removeClass('active');
+        colorview = 0;
+    }
 }
