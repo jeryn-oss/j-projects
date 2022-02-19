@@ -5,6 +5,7 @@ var colorPicker = new iro.ColorPicker('#picker', {
 });
 $(function(){
     for(var i = 1; i<= 12; i++){
+        $('.colorcircle'+i).css('background', $('.colorcircle'+i).prop('title'))
     }
 });
 
