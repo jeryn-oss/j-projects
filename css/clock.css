@@ -194,3 +194,7 @@ i:hover{
 .day.active{
     display: flex;
 }
+
+.test {
+    color: #008080;
+}

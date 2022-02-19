@@ -1,5 +1,14 @@
 var time;
-const t = setInterval(clock, 10);
+var colorPicker = new iro.ColorPicker('#picker', {
+    width: 150,
+    color: $('html').css('--firstcolor')
+});
+$(function(){
+    for(var i = 1; i<= 12; i++){
+    }
+});
+
+const t = setInterval(clock, 1000);
 var period = 0;
 var Passing;
 var day = 1;
@@ -12,7 +21,6 @@ var endofday = false;
 var passingnum = 0;
 var mintest = 25;
 var hourtest = 11;
-var timer =0;
 var periodsub;
 setInterval(() => {
             $('.loader').css('opacity', 0)
@@ -25,7 +33,8 @@ setInterval(() => {
 }, 3000);
 function clock(){
     time = moment().format('hhmmssa');
-    secs = secondAfy(time.substring(0,2),time.substring(2,4),time.substring(4,6),time.substring(6,8));
+
+    var secs = secondAfy(time.substring(0,2),time.substring(2,4),time.substring(4,6),time.substring(6,8));
     calc(secs);
 }
 
@@ -143,10 +152,18 @@ function calc(sec){
                     updatescreen(period,timeAfy(current),lunch,'Period ends in');
                 }
                 if(period == 2){
-                    start = secondAfy(10,03,00);
-                    end = secondAfy(11,25,00);
-                    current = sub(sec,end);
-                    updatescreen(period,timeAfy(current),lunch,'Period ends in');
+                    if(lunch == 'a'){
+                        start = secondAfy(10,03,00);
+                        end = secondAfy(11,25,00);
+                        current = sub(sec,end);
+                        updatescreen(period,timeAfy(current),lunch,'lunch starts in');
+                    }else{
+                        start = secondAfy(10,03,00);
+                        end = secondAfy(11,25,00);
+                        current = sub(sec,end);
+                        updatescreen(period,timeAfy(current),lunch,'Period ends in');
+                    }
+                    
                 }
                 if(lunchtime != true){
                     if(lunch == 'a'){
@@ -191,7 +208,7 @@ function calc(sec){
                             }
                         }
                             
-                        }
+                    }
                 }
                 if(period == 4){
                     start = secondAfy(13,38,00);
@@ -312,7 +329,7 @@ function getperiod(sec){
             period = 3
             periodsub = 'bdl'
         }
-        if(secondAfy(12,25,00) <= sec){
+        if(secondAfy(12,58,00) <= sec){
             lunchtime = true;
         }
         
@@ -327,7 +344,6 @@ function getperiod(sec){
         Passing = false
         period = 4
     }
-
     if(secondAfy(15,00,00) < sec || sec > secondAfy(00,00,00) && sec < secondAfy(8,00,00)){
         endofday = true;
         period = 0;
@@ -593,7 +609,7 @@ function secondAfy(hour,min,sec,a){
         }
     }else if(a == 'pm'){
         if(hour == 12){
-            hour = 12
+            x = (12 * 60) * 60; 
         }else{
             x = (+(parseInt(hour,10)+ +12) * 60) * 60;
         }
@@ -604,6 +620,9 @@ function secondAfy(hour,min,sec,a){
     var y = (min * 60);
     var z = sec;
     var f = (parseInt(x,10) + parseInt(y,10) + parseInt(z,10));
+    if(a == 'pm'){
+        console.log(f)
+    }
     return (f);
 }
 
@@ -637,4 +656,8 @@ function lunchfunc(input){
 
 function clockAfy(timein){
     return timein.substring(0,2) + ':' + timein.substring(2,4) + ':' + timein.substring(4,6)
+}
+
+function setColor(hex){
+    $('html').css('--firstcolor', hex)
 }
