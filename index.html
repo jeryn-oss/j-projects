@@ -9,15 +9,27 @@
     <link rel="stylesheet" href="/css/clock.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="/js/moment/min/moment.min.js"></script>
-    <script src="/js/clock.js"></script>
+    <script src="/js/moment/min/moment.min.js" type="text/javascript"></script>
+    <script defer src="/js/clock.js" type="text/javascript"></script>
 </head>
-<canvas id="my-canvas"></canvas>
+<div class="loader loadview">
+    <div class="item item1"></div>
+    <div class="item item2"></div>
+    <div class="item item3"></div>
+    <div class="item item4"></div>
+    <div class="item item5"></div>   
+    <div class="item item6"></div>
+    <div class="item item7"></div>
+    <div class="item item8"></div>
+    <div class="item item9"></div>
+    <div class="item item10"></div>  
+</div>
 <body >
     <div class="clockbarholder">
-        <h4 style="margin: 0px; font-size: 10px;" id="info">Period ends in</h4>
+        <h4 style="margin: 0px; font-size: 10px;" id="info">Hasnt loaded yet</h4>
         <h1 id="time-till-end">00:00:00</h1>
-        <h2>Period:</h2>
+        <div id="clock">
+            <h2>Period:</h2>
         <div id="periodholder">
             <div class="day" id="day1">
                 <div class="period1 periodcircles">1</div>
@@ -36,7 +48,7 @@
         </div>
         <h2>Lunch:</h2>
         <div id="lunchholder">
-            <div onclick="lunchfunc('a');"  class="luncha lunchbtn activecircle periodcircles">a</div>
+            <div onclick="lunchfunc('a');"  class="luncha lunchbtn hoveraffect periodcircles">a</div>
             <div onclick="lunchfunc('b');"  class="lunchb lunchbtn hoveraffect periodcircles">b</div>
             <div onclick="lunchfunc('c');"  class="lunchc lunchbtn hoveraffect periodcircles">c</div>
             <div onclick="lunchfunc('d');"  class="lunchd lunchbtn hoveraffect periodcircles">d</div>
@@ -44,6 +56,7 @@
 
         <div class="clockbar">
             <div class="clockprogress">
+        </div>
         </div>
         </div>
     </div>

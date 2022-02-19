@@ -8,6 +8,27 @@
     user-select: none;
 }
 
+i{
+    font-size: 30px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    border-radius: 30px;
+    padding: 6px;
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: var(--ptextcolor);
+    transition: ease-in-out .2s;
+} 
+
+i:hover{
+    color: var(--basetext);
+}
+
 .clockbarholder {
     display: flex;
     justify-content: center;
@@ -49,6 +70,24 @@
     justify-content: center;
 }
 
+#time-till-end.end{
+    text-shadow:-1px -1px 1px #efede3, 
+    0px 1px 0 #1f1e1e, 
+    1px 2px 0 #1f1e1e, 
+    2px 3px 0 #1f1e1e, 
+    3px 4px 0 #1f1e1e, 
+    4px 5px 0 #1f1e1e, 
+    5px 6px 0 #1f1e1e, 
+
+    40px 22px 5px rgba(0, 0, 0, 0.9),
+    40px 25px 5px rgba(0, 0, 0, 0.3),
+    40px 29px 8px rgba(0, 0, 0, 0.5),
+    40px 31px 35px rgba(0, 0, 0, 0.9);
+}
+
+
+
+
 .lunchbtn{
     color: var(--ptextcolor);
 }
@@ -88,17 +127,26 @@
     height: 30px;
     margin: 0px;
     margin-top: 20px;
-    border-radius: 200px;
+    border-radius: 5px;
     background: var(--backgroundcolorlighter);
 }
 
 
 .clockprogress {
     width: 0%;
-    border-radius: 50px;
-    background: linear-gradient(37deg, rgb(204, 204, 204), var(--firstcolor));
+    border-radius: 5px;
+    background: linear-gradient(37deg, rgb(204, 204, 204) , var(--firstcolor) 50%);
     transition: ease-in-out .4s;
 }
+
+#clock {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+
 
 @media only screen and (max-width: 400px) {
     .clockbarholder {
@@ -113,7 +161,7 @@
         display: flex;
         width: 90%;
         padding: 0px;
-        transform: translate(-50%, -50%);
+        translate: 0px -20%;
         background: none;
     }
     #periodholder{
@@ -128,6 +176,7 @@
         align-items: center;
         justify-content: center;
     }
+
   }
 
 #my-canvas {

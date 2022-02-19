@@ -26,296 +26,80 @@
     transition: 0.3s cubic-bezier(0.62, 0.19, 0.4, 0.98);
   }
   
-  .bluebutton {
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 50%;
-    max-width: 500px;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 5px;
-    font-size: 15px;
-    background-color: var(--secondarycolor);
-    transition: ease-in-out 0.2s;
-  }
-  
-  .purplebutton {
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 50%;
-    max-width: 500px;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 5px;
-    font-size: 15px;
-    background-color: var(--firstcolor);
-    transition: ease-in-out 0.2s;
-  }
-
-  .purplebutton:hover {
-    border-radius: 20px;
-    width: 80%;
-  }
-  
-  .bluebutton:hover {
-    border-radius: 20px;
-  }
-
-  /*/ nav bar stuff "page num settings and email" /*/
-
-  .start_div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.start_div i {
-  font-size: 150px;
-  color: var(--firstcolor);
-  margin-bottom: 40px;
-}
-
-.start_div button {
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 230px;
-  height: 40px;
-  border-radius: 5px;
-  font-size: 15px;
-  background-color: var(--secondarycolor);
-  transition: ease-in-out 0.3s;
-}
-
-.header_arrows {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.start_div button:hover {
-  width: 350px;
-  border-radius: 30px;
-}
-
-.content_holder {
-  display: flex;
-  overflow: hiden;
-  width: 100%;
-}
-
-.page_arrow {
-  font-size: 40px;
-  color: var(--ptextcolor);
-  transition: ease-in-out 0.2s;
-}
-
-.page_arrow:hover {
-  color: var(--basetext);
-}
-
-.page_progress {
-  top: 0px;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  width: 100%;
--webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
--o-user-select: none;
-user-select: none;
-}
-
-.headerbuttons {
-  justify-self: flex-end;
-}
-
-.headerbuttons i {
-  margin-left: 5px;
-  margin-right: 10px;
-  font-size: 30px;
-  color: var(--ptextcolor);
-  transition: ease-in-out 0.3s;
-}
-
-.headerbuttons i:hover {
-  color: var(--basetext);
-}
-
-/*/ setting css and inside the settings /*/
-
-.settings.viewable {
-    display: flex;
-    opacity: 0;
-    transition: ease-in-out 0.4s;
-  }
-  
-  .settings {
+  .loader.loadview {
     position: fixed;
+    background: var(--backgroundcolor);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+    transition: ease-out .4s;
+}
+
+.loader {
     display: none;
-    width: 500px;
-    height: 350px;
-    background: var(--backgroundcolorlighter);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    padding: 10px;
-    padding-top: 10px;
-    border-radius: 20px;
-    flex-direction: column;
-  }
-  
-  .settingsnav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  
-  .settingsnav i {
-    font-size: 35px;
-    color: var(--ptextcolor);
-    transition: ease-in-out 0.2s;
-  }
-  
-  .settingsnav i:hover {
-    color: var(--basetext);
-  }
-  
-  .settings p {
-    margin: 0;
-    padding: 0;
-    height: max-content;
-    color: var(--ptextcolor);
-    transition: ease-in-out 0.2s;
-  }
-  
-  .settings p:hover {
-    cursor: default;
-    color: var(--basetext);
-  }
-  
-  .settings li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    height: max-content;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .settings ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100px;
-  }
-  
-  .settingscontent_holder {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-  }
-  
-  .settings .activesettingsnav {
-    padding-left: 20px;
-    color: var(--basetext);
-  }
-  
-  .currentsettings {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .colorsettings {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .color_holder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow-y: scroll;
-    width: 100%;
-    height: 75%;
-  }
-  
-  .colors {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin: 10px;
-    background: rgb(119, 119, 119);
-    border-radius: 10px;
-  }
-  
-  .selected_color::after {
-    position: relative;
-    display: block;
-    content: "";
-    margin-right: 15px;
-    height: 2px;
-    width: 15px;
-    background: var(--backgroundcolor);
-  }
-  
-  .selected_color {
-    border: 3px solid var(--backgroundcolor);
-  }
-  
-  .selected_color::before {
-    position: relative;
-    display: block;
-    content: "";
-    margin-left: 15px;
-    height: 2px;
-    width: 15px;
-    background: var(--backgroundcolor);
-  }
-  
-  .colorboxes {
-    margin: 10px;
-    width: 35px;
-    height: 35px;
-    border-radius: 5px;
-  }
-  
-  .color_holder .colors {
-    border: 3px solid transparent;
-    width: 350px;
-  
-    transition: ease-in-out 0.2s;
-  }
-  
-  .color_holder .colors:hover {
-    border-color: var(--backgroundcolor);
-    width: 92%;
-    height: 56px;
-  }
+    transition: ease-out .4s;
+}
+
+.item {
+    height: 3px;
+    width: 10px;
+    background: var(--firstcolor);
+    margin: 5px;
+    border-radius: 25px;
+
+}
+
+.item1 {
+    animation: load infinite .7s linear .1s;
+}
+.item2 {
+    animation: load infinite .7s linear .2s;
+}
+.item3 {
+    animation: load infinite .7s linear .3s;
+}
+.item4 {
+    animation: load infinite .7s linear .4s;
+}
+.item5 {
+    animation: load infinite .7s linear .5s;
+}
+.item6 {
+    animation: load infinite .7s linear .6s;
+}
+.item7 {
+    animation: load infinite .7s linear .7s;
+}
+.item8 {
+    animation: load infinite .7s linear .8s;
+}
+.item9 {
+    animation: load infinite .7s linear .9s;
+}
+.item10 {
+    animation: load infinite .7s linear 01s; 
+}
+
+@keyframes load {
+    0% {
+        transform: translatey(0px);
+    }
+    25% {
+        transform: translatey(10px);
+        height: 25px;
+    }
+    50% {
+        height: 10px;
+        transform: translatey(0px)
+    }
+    75%{
+        height: 25px;
+        transform: translatey(-10px)
+    }
+    100%{
+        transform: translatey(0px)
+    }
+}
