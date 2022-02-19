@@ -1,4 +1,4 @@
-var currentcolor = $('html').css('--firstcolor')
+var currentcolor = setColor('start');
 var colorPicker = new iro.ColorPicker('#picker', {
     width: 150,
     color: currentcolor
@@ -10,7 +10,7 @@ $(function(){
 });
 colorPicker.on('color:change', function(color) {
     // log the current color as a HEX string
-    setColor(color.hexString);
+    setColor((color.hexString));
   });
 var time;
 const t = setInterval(clock, 1000);
@@ -364,7 +364,7 @@ function updatescreen(p,time,l,msg){
     }
     if(day == 0 || endofday == true){
         $('#clock').css('display', 'none');
-        $('#time-till-end').css('color', $('html').css('--firstcolor'))
+        $('#time-till-end').css('color', 'var(--firstcolor)')
         $('#time-till-end').css('font-size', '50px');
         if(!$('.time-till-end').hasClass('end')){
             $('#time-till-end').addClass('end')
@@ -662,10 +662,7 @@ function clockAfy(timein){
     return timein.substring(0,2) + ':' + timein.substring(2,4) + ':' + timein.substring(4,6)
 }
 
-function setColor(hex){
-    $('html').css('--firstcolor', hex)
-    var currentcolor = hex
-}
+
 
 var colorview = 0;
 function opencolor(){
@@ -678,4 +675,24 @@ function opencolor(){
         $('.pickerholder').removeClass('active');
         colorview = 0;
     }
+}
+function setColor(hex){
+    if(hex == 'start'){
+        return getColor();
+    }else{
+        $('html').css('--firstcolor', hex);
+        localStorage.setItem('color', hex);
+        return  hex;
+    }
+}
+function getColor(){
+    var local = localStorage.getItem('setupcolor')
+        if(local == 2){
+            $('html').css('--firstcolor', localStorage.getItem('color'))
+            return localStorage.getItem('color');
+        }else{
+            localStorage.setItem('setupcolor',2);
+            localStorage.setItem('color', '#DC6985');
+            return '#DC6985';
+        }
 }

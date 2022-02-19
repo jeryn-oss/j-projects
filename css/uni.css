@@ -31,7 +31,7 @@
     background: var(--backgroundcolor);
     width: 100vw;
     height: 100vh;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     transition: ease-out .4s;
