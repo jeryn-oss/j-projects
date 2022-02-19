@@ -161,8 +161,10 @@ i:hover{
         display: flex;
         width: 90%;
         padding: 0px;
-        translate: 0px -20%;
         background: none;
+    }
+    #time-till-end.end{
+        margin-bottom: 30px;
     }
     #periodholder{
         width: 70%;
