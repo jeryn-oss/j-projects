@@ -17,7 +17,7 @@ var periodsub;
 setInterval(() => {
             $('.loader').css('opacity', 0)
             setInterval(() => {
-                if(!$('.loader').hasClass('loadview')){
+                if($('.loader').hasClass('loadview')){
                     $('.loader').removeClass('loadview')
                 }
             }, 400);

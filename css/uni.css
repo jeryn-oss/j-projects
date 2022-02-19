@@ -35,6 +35,7 @@
     align-items: center;
     justify-content: center;
     transition: ease-out .4s;
+    z-index: 1;
 }
 
 .loader {
