@@ -13,7 +13,7 @@ colorPicker.on('color:change', function(color) {
     setColor((color.hexString));
   });
 var time;
-const t = setInterval(clock, 1000);
+const t = setInterval(clock, 180);
 var period = 0;
 var Passing;
 var day = 1;
