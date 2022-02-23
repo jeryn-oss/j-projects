@@ -176,18 +176,18 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 5px;
+    padding-right: 10px;
     position: fixed;
     background: var(--backgroundcolorlighter);
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 0px 20px 20px 0px;
     top: 27px;
     left: 0px;
     transition: linear .2s;
 }
 .colorbtn:hover{
-    width: 40px;
+    width: 50px;
 }
 
 .colorbtn.active{
@@ -202,7 +202,7 @@
 
 
 .colorbtn i{
-    font-size: 25px;
+    font-size: 28px;
     color: var(--firstcolor);
     transition: linear .2s;
 }
