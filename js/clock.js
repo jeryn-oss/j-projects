@@ -114,6 +114,15 @@ function calc(sec){
                         Passing = false; 
                     } 
                 }
+                else if(passingnum == 'path2'){
+                    start = secondAfy(09,09,00);
+                    end = secondAfy(09,14,00);
+                    current = sub(sec,end);
+                    updatescreen(period,timeAfy(current),lunch,'Passing period ends in');
+                    if(current <= 0){
+                        Passing = false; 
+                    } 
+                }
             }
             if(lunchtime == true){
                 if(lunch == 'a'){
@@ -150,6 +159,18 @@ function calc(sec){
                 }
             }
             if(Passing != true){
+                if(period == "p1"){
+                    start = secondAfy(8,30,00);
+                    end = secondAfy(9,09,00);
+                    current = sub(sec,end);
+                    updatescreen(1,timeAfy(current),lunch,'Pathways A ends in');
+                }
+                if(period == "p2"){
+                    start = secondAfy(9,14,00);
+                    end = secondAfy(9,53,00);
+                    current = sub(sec,end);
+                    updatescreen(1,timeAfy(current),lunch,'Pathways B ends in');
+                }
                 if(period == 1){
                     start = secondAfy(8,30,00);
                     end = secondAfy(9,53,00);
@@ -239,10 +260,27 @@ function getperiod(sec){
         Passing = true
         passingnum = 0;
     }
-    if(secondAfy(08,30,00) <= sec){
+    if(day == 2){
+        if(secondAfy(08,30,00) <= sec){
+            Passing = false
+            period = "p1";
+        }
+        if(secondAfy(09,09,00) <= sec){
+            Passing = true;
+            passingnum = 'path2';
+            period = "p2";
+        }
+        if(secondAfy(09,14,00) <= sec){
+            Passing = false
+            period = "p2";
+        }
+    }else{
+        if(secondAfy(08,30,00) <= sec){
         Passing = false
         period = 1;
+        }
     }
+    
     if(secondAfy(09,53,00) <= sec){
         Passing = true;
         passingnum = 1;
@@ -355,7 +393,7 @@ function getperiod(sec){
     }
 }
 
-function updatescreen(p,time,l,msg){
+function updatescreen(period,time,l,msg){
     //period func
     if(endofday == false){
         var percent = Math.abs((current-(end-start)) /(end - start)*100) + '%';
