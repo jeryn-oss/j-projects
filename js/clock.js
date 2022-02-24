@@ -16,7 +16,7 @@ var time;
 const t = setInterval(clock, 180);
 var period = 0;
 var Passing;
-var day = 2;
+var day = 1;
 var lunch = lunchfunc('var');
 var lunchtime = false;
 var start;
@@ -27,6 +27,8 @@ var passingnum = 0;
 var mintest = 25;
 var hourtest = 11;
 var periodsub;
+startloader();
+function startloader(){
 setInterval(() => {
             $('.loader').css('opacity', 0)
             setInterval(() => {
@@ -34,11 +36,10 @@ setInterval(() => {
                     $('.loader').removeClass('loadview')
                 }
             }, 400);
-            
 }, 3000);
+}
 function clock(){
     time = moment().format('hhmmssa');
-
     var secs = secondAfy(time.substring(0,2),time.substring(2,4),time.substring(4,6),time.substring(6,8));
     calc(secs);
 }
@@ -700,8 +701,6 @@ function clockAfy(timein){
     return timein.substring(0,2) + ':' + timein.substring(2,4) + ':' + timein.substring(4,6)
 }
 
-
-
 var colorview = 0;
 function opencolor(){
     if(colorview == 0){
@@ -714,6 +713,7 @@ function opencolor(){
         colorview = 0;
     }
 }
+
 function setColor(hex){
     if(hex == 'start'){
         return getColor();
@@ -723,6 +723,7 @@ function setColor(hex){
         return  hex;
     }
 }
+
 function getColor(){
     var local = localStorage.getItem('setupcolor')
         if(local == 2){
