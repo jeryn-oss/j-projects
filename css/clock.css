@@ -24,6 +24,12 @@
     background: none;
 }
 
+#time-till-end.end {
+    text-shadow: 0px 0px 15px rgb(0, 0, 0),
+    0px 0px 20px rgb(0, 0, 0),
+    0px 0px 195px var(--firstcolor);
+}
+
 .clockbarholder p {
     margin: 0;
 }

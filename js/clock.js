@@ -463,7 +463,7 @@ function updatescreen(period,time,l,msg){
         }
         if($('.period6').hasClass('activecircle')){
             $('.period6').toggleClass('activecircle');
-        }
+         }
         if($('.period7').hasClass('activecircle')){
             $('.period7').toggleClass('activecircle');
         }
