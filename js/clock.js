@@ -12,11 +12,13 @@ colorPicker.on('color:change', function(color) {
     // log the current color as a HEX string
     setColor((color.hexString));
   });
+
 var time;
 const t = setInterval(clock, 180);
 var period = 0;
 var Passing;
-var day = 1;
+var day = 2;
+var progresstheme = progressSet('get');
 var lunch = lunchfunc('var');
 var lunchtime = false;
 var start;
@@ -407,12 +409,17 @@ function updatescreen(period,time,l,msg){
         $('#time-till-end').css('font-size', '50px');
         if(!$('.time-till-end').hasClass('end')){
             $('#time-till-end').addClass('end')
+            
+        }if(!$('#info').hasClass('end')){
+            $('#info').addClass('end')
         }
+        
     }else{
         $('#time-till-end').css('color', $('html').css('--basetext'))
         $('#clock').css('display', 'flex');
         $('#time-till-end').css('font-size', '32px');
         $('#time-till-end').removeClass('end')
+        $('#info').removeClass('end')
     }
 
     if(day == 1){
@@ -735,3 +742,41 @@ function getColor(){
             return '#DC6985';
         }
 }
+
+function progressSet(input){
+    if(input != progresstheme && input != 'get'){
+        if(!$(progresstheme).hasClass('no')){
+            $(progresstheme).removeClass('activeselector')
+            $(progresstheme).addClass('no')
+            $(input).removeClass('no')
+            $(input).addClass('activeselector')
+            progresstheme = input;
+            localStorage.setItem('currenttheme',input)
+        }
+        
+    }
+    if(input == 'get'){
+        var l = localStorage.getItem('verifytheme')
+        if(l == 'true'){
+            setprogress(localStorage.getItem('currenttheme'));
+            return localStorage.getItem('currenttheme')
+
+        }
+        else{
+            localStorage.setItem('verifytheme', true)
+            localStorage.setItem('currenttheme', '.selector3')
+            setprogress('.selector3');
+            return localStorage.getItem('currenttheme')
+        }
+    }
+}
+
+function setprogress(prog){
+        $(prog).addClass('activeselector');
+        $(prog).removeClass('no');
+}
+
+var bar1 = new ldBar("#progcircle");
+/* ldBar stored in the element */
+var bar2 = document.getElementById('progcircle').ldBar;
+bar1.set(76);

@@ -38,6 +38,72 @@
     z-index: 1;
 }
 
+.progresstype {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+}
+
+.progresstype h3{
+    margin: 10px;
+}
+
+.ldBar-label {
+    color: #09f;
+    font-family: 'varela round';
+    font-size: 2.5em;
+    font-weight: 900;
+    display: none;
+  }
+
+  .ldBar path.mainline {
+    stroke-linecap: round;
+  }
+
+  #info.end{
+    text-shadow: 0px 0px 15px rgb(0, 0, 0),
+    0px 0px 20px rgb(0, 0, 0),
+    0px 0px 195px var(--basetext);
+  }
+
+#progcircle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.selector{
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: var(--backgroundcolor);
+    transition: ease-in-out .2s;
+}
+
+.selectoroptions{
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.selector.no:hover{
+    opacity: .5;
+    background: var(--firstcolor);
+}
+
+.selector.activeselector {
+    background: var(--firstcolor);
+}
+
+.selector.activeselector:hover{
+    background: var(--firstcolor);
+}
+
 .loader {
     display: none;
     transition: ease-out .4s;
