@@ -417,7 +417,7 @@ function updatescreen(period,time,l,msg){
     }else{
         $('#time-till-end').css('color', $('html').css('--basetext'))
         $('#clock').css('display', 'flex');
-        $('#time-till-end').css('font-size', '32px');
+        $('#time-till-end').css('font-size', '40px');
         $('#time-till-end').removeClass('end')
         $('#info').removeClass('end')
     }
