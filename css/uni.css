@@ -24,6 +24,7 @@
     overflow: hidden;
     top: 0px;
     transition: 0.3s cubic-bezier(0.62, 0.19, 0.4, 0.98);
+    background-image: image('/imaa');
   }
   
   .loader.loadview {
@@ -81,6 +82,7 @@
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
+    width: 30%;
     background: var(--backgroundcolor);
     transition: ease-in-out .2s;
 }
@@ -115,7 +117,11 @@
     background: var(--firstcolor);
     margin: 5px;
     border-radius: 25px;
+    
+}
 
+.item.boxshadow{
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 
 .item1 {
@@ -185,6 +191,10 @@
   transition: linear .2s;
 }
 
+.pickerholder.boxshadow{
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
 .pickerholder.active {
     position: fixed;
     display: flex;
@@ -226,7 +236,7 @@
 
 .colorcircle:hover{
     opacity: 1;
-    box-shadow: 5px 5px 2px var(--backgroundcolor);
+    box-shadow: 0px 0px 5px var(--backgroundcolor);
 }
 
 .colorholder {
@@ -250,8 +260,14 @@
     border-radius: 0px 20px 20px 0px;
     top: 27px;
     left: 0px;
+    z-index: -2;
     transition: linear .2s;
 }
+
+.colorbtn.boxshadow {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
 .colorbtn:hover{
     width: 40px;
 }
@@ -287,7 +303,7 @@
         left: 0;
         bottom: 0px;
         transition: linear .2s;
-        translate: 0px 235px;
+        translate: 0px 390px;
     }
     .pickerholder.active {
         position: fixed;
@@ -319,7 +335,7 @@
         transition: linear .2s;
         top: unset;
         left: unset;
-        bottom: 240px;
+        bottom: 360px;
         right: 5px;
         width: 40px;
         height: 40px;
@@ -330,5 +346,17 @@
     }
     .colorbtn:hover{
         width: 40px;
+    }
+    .selector{
+        display: flex;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 40px;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 40px;
+        margin-bottom: 20px;
+        font-size: 20px;
     }
 }

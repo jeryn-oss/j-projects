@@ -82,9 +82,15 @@
     transition: ease-in-out .2s;
 }
 
+.periodcircles.boxshadow{
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+ 
 .activecircle {
     background: var(--firstcolor);
     color: var(--basetext);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0), 0px 0px 7px var(--firstcolor);
 }
 
 .clockbar {
@@ -96,14 +102,22 @@
     margin-top: 20px;
     border-radius: 5px;
     background: var(--backgroundcolorlighter);
+    transition: ease-in-out .2s;
 }
 
+.clockbar.boxshadow{
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
 
 .clockprogress {
     width: 0%;
     border-radius: 5px;
     background:  var(--firstcolor);
     transition: ease-in-out .2s;
+}
+
+.clockprogress.boxshadow{
+    box-shadow: 0px 0px 5px var(--firstcolor);
 }
 
 #clock {

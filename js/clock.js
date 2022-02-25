@@ -753,7 +753,22 @@ function progressSet(input){
             progresstheme = input;
             localStorage.setItem('currenttheme',input)
         }
-        
+        if(input == '.selector1'){
+            $('.item').addClass('boxshadow');
+            $('.periodcircles').addClass('boxshadow')
+            $('.pickerholder').addClass('boxshadow')
+            $('.colorbtn').addClass('boxshadow')
+            $('.clockbar').addClass('boxshadow')
+            $('.clockprogress').addClass('boxshadow')
+        }
+        if(input == '.selector3'){
+            $('.item').removeClass('boxshadow');
+            $('.periodcircles').removeClass('boxshadow');
+            $('.pickerholder').removeClass('boxshadow');
+            $('.colorbtn').removeClass('boxshadow')
+            $('.clockbar').removeClass('boxshadow')
+            $('.clockprogress').removeClass('boxshadow')
+        }
     }
     if(input == 'get'){
         var l = localStorage.getItem('verifytheme')
@@ -769,14 +784,19 @@ function progressSet(input){
             return localStorage.getItem('currenttheme')
         }
     }
+
 }
 
 function setprogress(prog){
         $(prog).addClass('activeselector');
         $(prog).removeClass('no');
+        if(prog == '.selector1'){
+            $('.item').addClass('boxshadow');
+            $('.periodcircles').addClass('boxshadow')
+            $('.pickerholder').addClass('boxshadow')
+            $('.colorbtn').addClass('boxshadow')
+            $('.clockbar').addClass('boxshadow')
+            $('.clockprogress').addClass('boxshadow')
+        }
 }
 
-var bar1 = new ldBar("#progcircle");
-/* ldBar stored in the element */
-var bar2 = document.getElementById('progcircle').ldBar;
-bar1.set(76);
