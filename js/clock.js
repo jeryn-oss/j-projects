@@ -776,8 +776,7 @@ function progressSet(input){
             setprogress(localStorage.getItem('currenttheme'));
             return localStorage.getItem('currenttheme')
 
-        }
-        else{
+        }else{
             localStorage.setItem('verifytheme', true)
             localStorage.setItem('currenttheme', '.selector3')
             setprogress('.selector3');
@@ -799,4 +798,3 @@ function setprogress(prog){
             $('.clockprogress').addClass('boxshadow')
         }
 }
-
