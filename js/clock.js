@@ -17,7 +17,7 @@ var time;
 const t = setInterval(clock, 180);
 var period = 0;
 var Passing;
-var day = 2;
+var day = 1;
 var progresstheme = progressSet('get');
 var lunch = lunchfunc('var');
 var lunchtime = false;
