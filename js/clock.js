@@ -64,8 +64,8 @@ function calc(sec){
                     } 
                 }
                 else if(passingnum == 1){
-                    start = secondAfy(9,53,00);
-                    end = secondAfy(10,03,00);
+                    start = secondAfy(9,57,00);
+                    end = secondAfy(10,05,00);
                     current = sub(sec,end);
                     updatescreen(period,timeAfy(current),lunch,'Passing period ends in');
                     if(current <= 0){
@@ -73,8 +73,8 @@ function calc(sec){
                     } 
                 }
                 else if(passingnum == 2){
-                        start = secondAfy(11,25,00);
-                        end = secondAfy(11,35,00);
+                        start = secondAfy(11,28,00);
+                        end = secondAfy(11,36,00);
                         current = sub(sec,end);
                         updatescreen(period,timeAfy(current),lunch,'Passing period ends in');
                         if(current <= 0){
@@ -82,8 +82,8 @@ function calc(sec){
                         } 
                 }
                 else if(passingnum == 'a'){
-                    start = secondAfy(11,55,00);
-                    end = secondAfy(12,05,00);
+                    start = secondAfy(11,58,00);
+                    end = secondAfy(12,06,00);
                     current = sub(sec,end);
                     updatescreen(period,timeAfy(current),lunch,'Passing period ends in');
                     if(current <= 0){
@@ -100,8 +100,8 @@ function calc(sec){
                     } 
                 }
                 else if(passingnum == 'c'){
-                    start = secondAfy(12,55,00);
-                    end = secondAfy(13,00,00);
+                    start = secondAfy(12,58,00);
+                    end = secondAfy(13,03,00);
                     current = sub(sec,end);
                     updatescreen(period,timeAfy(current),lunch,'Passing period ends in');
                     if(current <= 0){
@@ -182,36 +182,35 @@ function calc(sec){
                 }
                 if(period == 2){
                     if(lunch == 'a'){
-                        start = secondAfy(10,03,00);
-                        end = secondAfy(11,25,00);
+                        start = secondAfy(10,05,00);
+                        end = secondAfy(11,28,00);
                         current = sub(sec,end);
                         updatescreen(period,timeAfy(current),lunch,'lunch starts in');
                     }else{
-                        start = secondAfy(10,03,00);
-                        end = secondAfy(11,25,00);
+                        start = secondAfy(10,05,00);
+                        end = secondAfy(11,28,00);
                         current = sub(sec,end);
                         updatescreen(period,timeAfy(current),lunch,'Period ends in');
                     }
-                    
                 }
                 if(lunchtime != true){
                     if(lunch == 'a'){
                         if(period == 3){
-                            start = secondAfy(12,05,00);
-                            end = secondAfy(13,28,00);
+                            start = secondAfy(12,06,00);
+                            end = secondAfy(13,29,00);
                             current = sub(sec,end);
                             updatescreen(period,timeAfy(current),lunch,'Period ends in');
                         } 
                     }else if(lunch == 'b'){
                         if(period == 3){
                                 if(periodsub == 'bbl'){
-                                start = secondAfy(11,35,00);
-                                end = secondAfy(11,55,00);
+                                start = secondAfy(11,36,00);
+                                end = secondAfy(11,58,00);
                                 current = sub(sec,end);
                                 updatescreen(period,timeAfy(current),lunch,'Lunch starts in');
                             } else if(periodsub == 'abl'){
-                                start = secondAfy(12,30,00);
-                                end = secondAfy(13,28,00);
+                                start = secondAfy(12,33,00);
+                                end = secondAfy(13,29,00);
                                 current = sub(sec,end);
                                 updatescreen(period,timeAfy(current),lunch,'Period ends in');
                             }
@@ -220,27 +219,26 @@ function calc(sec){
                     else if (lunch == 'c' || lunch =='d'){
                         if(period == 3){
                             if(periodsub == 'bcl'){
-                                start = secondAfy(11,35,00);
-                                end = secondAfy(12,25,00);
+                                start = secondAfy(11,36,00);
+                                end = secondAfy(12,28,00);
                                 current = sub(sec,end);
                                 updatescreen(period,timeAfy(current),lunch,'Lunch starts in');
                             }else if(periodsub == 'acl'){
-                                start = secondAfy(13,00,00);
-                                end = secondAfy(13,28,00);
+                                start = secondAfy(13,03,00);
+                                end = secondAfy(13,29,00);
                                 current = sub(sec,end);
                                 updatescreen(period,timeAfy(current),lunch,'Period ends in');
                             }else if(periodsub == 'bdl'){
-                                start = secondAfy(11,35,00);
-                                end = secondAfy(13,00,00);
+                                start = secondAfy(11,36,00);
+                                end = secondAfy(12,59,00);
                                 current = sub(sec,end);
                                 updatescreen(period,timeAfy(current),lunch,'lunch starts in');
                             }
                         }
-                            
                     }
                 }
                 if(period == 4){
-                    start = secondAfy(13,38,00);
+                    start = secondAfy(13,37,00);
                     end = secondAfy(15,00,00);
                     current = sub(sec,end);
                     updatescreen(period,timeAfy(current),lunch,'School ends in');
@@ -284,109 +282,109 @@ function getperiod(sec){
         }
     }
     
-    if(secondAfy(09,53,00) <= sec){
+    if(secondAfy(09,57,00) <= sec){
         Passing = true;
         passingnum = 1;
         period = 2;
     }
-    if(secondAfy(10,03,00) <= sec){
+    if(secondAfy(10,05,00) <= sec){
         period = 2
         Passing = false
     }
     if(lunch == 'a'){
-        if(secondAfy(11,25,00) <= sec){
+        if(secondAfy(11,28,00) <= sec){
             lunchtime = true;
             period = 3;
         }
-        if(secondAfy(11,55,00) <= sec){
+        if(secondAfy(11,58,00) <= sec){
             passingnum = 'a';
             Passing = true;
             period = 3;
         }
-        if(secondAfy(12,05,00) <= sec){
+        if(secondAfy(12,06,00) <= sec){
             period = 3;
         }
     }
     if(lunch == 'b'){
-        if(secondAfy(11,25,00) <= sec){
+        if(secondAfy(11,28,00) <= sec){
             lunchtime = false
             Passing = true;
             passingnum = 2;
             period = 3;
         }
-        if(secondAfy(11,35,00) <= sec){
+        if(secondAfy(11,36,00) <= sec){
             Passing = false
             period = 3;
             periodsub = 'bbl';
         }
-        if(secondAfy(11,55,00) <= sec){
+        if(secondAfy(11,58,00) <= sec){
             lunchtime = true;
             period = 3
         }
-        if(secondAfy(12,25,00) <= sec){
+        if(secondAfy(12,28,00) <= sec){
             lunchtime = false;
             Passing = true;
             passingnum = 'b';
             period = 3;
             periodsub = 'abl';
         }
-        if(secondAfy(12,30,00) <= sec){
+        if(secondAfy(12,33,00) <= sec){
             period = 3;
             periodsub = 'abl';
         }
     }
     if(lunch == 'c'){
-        if(secondAfy(11,25,00) <= sec ){
+        if(secondAfy(11,28,00) <= sec ){
             lunchtime = false
             Passing = true;
             passingnum = 2;
             period = 3;
         }
-        if(secondAfy(11,35,00) <= sec){
+        if(secondAfy(11,36,00) <= sec){
             Passing = false;
             period = 3;
             periodsub = 'bcl';
         }
-        if(secondAfy(12,25,00) <= sec ){
+        if(secondAfy(12,28,00) <= sec ){
             lunchtime = true;
             period = 3;
         }
-        if(secondAfy(12,55,00) <= sec){
+        if(secondAfy(12,58,00) <= sec){
             lunchtime = false
             Passing = true; 
             passingnum = 'c';
             period = 3;
             periodsub  = 'acl'
         }
-        if(secondAfy(13,00,00) <= sec){
+        if(secondAfy(13,03,00) <= sec){
             period = 3
             periodsub = 'acl';
         }
     }
     if(lunch == 'd'){
-        if(secondAfy(11,25,00) <= sec ){
+        if(secondAfy(11,28,00) <= sec ){
             lunchtime = false
             Passing = true;
             passingnum = 2;
             period = 3;
         }
-        if(secondAfy(11,35,00) <= sec){
+        if(secondAfy(11,36,00) <= sec){
             Passing = false;
             period = 3
             periodsub = 'bdl'
         }
-        if(secondAfy(12,58,00) <= sec){
+        if(secondAfy(12,59,00) <= sec){
             lunchtime = true;
         }
         
     }
-    if(secondAfy(13,28,00) <= sec){
+    if(secondAfy(13,29,00) <= sec){
             lunchtime = false
             passingnum = 3
             Passing = true;
             period = 4;
         }
-    if(secondAfy(13,38,00) <= sec){
+    if(secondAfy(13,37,00) <= sec){
         Passing = false
         period = 4
     }
@@ -709,7 +707,12 @@ function clockAfy(timein){
 }
 
 var colorview = 0;
-function opencolor(){
+function opencolor(o){
+    if(o == "click" && colorview == 1){
+        $('.colorbtn').removeClass('active');
+        $('.pickerholder').removeClass('active');
+        colorview = 0;
+    }
     if(colorview == 0){
         $('.colorbtn').addClass('active');
         $('.pickerholder').addClass('active');
