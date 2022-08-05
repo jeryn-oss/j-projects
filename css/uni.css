@@ -84,7 +84,7 @@
     padding-right: 15px;
     width: 30%;
     background: var(--backgroundcolor);
-    transition: ease-in-out .2s;
+    transition: ease-in-out .3s;
 }
 
 .selectoroptions{
@@ -125,34 +125,34 @@
 }
 
 .item1 {
-    animation: load infinite .7s linear .1s;
+    animation: load infinite .7s ease-in-out .1s;
 }
 .item2 {
-    animation: load infinite .7s linear .2s;
+    animation: load infinite .7s ease-in-out .2s;
 }
 .item3 {
-    animation: load infinite .7s linear .3s;
+    animation: load infinite .7s ease-in-out .3s;
 }
 .item4 {
-    animation: load infinite .7s linear .4s;
+    animation: load infinite .7s ease-in-out .4s;
 }
 .item5 {
-    animation: load infinite .7s linear .5s;
+    animation: load infinite .7s ease-in-out .5s;
 }
 .item6 {
-    animation: load infinite .7s linear .6s;
+    animation: load infinite .7s ease-in-out .6s;
 }
 .item7 {
-    animation: load infinite .7s linear .7s;
+    animation: load infinite .7s ease-in-out .7s;
 }
 .item8 {
-    animation: load infinite .7s linear .8s;
+    animation: load infinite .7s ease-in-out .8s;
 }
 .item9 {
-    animation: load infinite .7s linear .9s;
+    animation: load infinite .7s ease-in-out .9s;
 }
 .item10 {
-    animation: load infinite .7s linear 01s; 
+    animation: load infinite .7s ease-in-out 01s; 
 }
 
 @keyframes load {
@@ -188,7 +188,7 @@
   overflow: hidden;
   margin: 20px;
   left: -390px;
-  transition: linear .2s;
+  transition: ease-in-out .2s;
 }
 
 .pickerholder.boxshadow{
@@ -207,7 +207,8 @@
     overflow: scroll;
     margin: 20px;
     left: 0px;
-    transition: linear .2s;
+    transition: ease-in-out .3s;
+    overflow: hidden;
 }
 
 .currentcolor {
@@ -231,7 +232,7 @@
   border-radius: 20px;
   margin: 10px;
   opacity: .85;
-  transition: linear .2s;
+  transition: ease-in-out .3s;
 }
 
 .colorcircle:hover{
@@ -261,7 +262,7 @@
     top: 27px;
     left: 0px;
     z-index: -2;
-    transition: linear .2s;
+    transition: ease-in-out .3s;
 }
 
 .colorbtn.boxshadow {
@@ -275,7 +276,7 @@
 .colorbtn.active{
     left: 390px;
     width: 30px;
-    transition: linear .2s;
+    transition: ease-in-out .3s;
 }
 
 .colorbtn.active:hover{
@@ -286,7 +287,7 @@
 .colorbtn i{
     font-size: 28px;
     color: var(--firstcolor);
-    transition: linear .2s;
+    transition: ease-in-out .3s;
 }
 
 
@@ -302,8 +303,9 @@
         margin: 0px;
         left: 0;
         bottom: 0px;
-        transition: linear .2s;
+        transition: ease-in-out .2s;
         translate: 0px 390px;
+        overflow: hidden;
     }
     .pickerholder.active {
         position: fixed;
@@ -316,8 +318,9 @@
         margin: 0px;
         left: 0;
         bottom: 0px;
-        transition: linear .2s;
+        transition: ease-in-out .2s;
         translate: 0px 0px;
+        overflow: hidden;
     }
     .colorbtn{
         top: unset;
@@ -329,10 +332,10 @@
         border-radius: 25px;
         justify-content: center;
         padding: 3px;
-        transition: linear .2s;
+        transition: ease-in-out .2s;
     }
     .colorbtn.active{
-        transition: linear .2s;
+        transition: ease-in-out .2s;
         top: unset;
         left: unset;
         bottom: 360px;

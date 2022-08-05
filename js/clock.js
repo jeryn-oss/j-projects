@@ -176,7 +176,7 @@ function calc(sec){
                 }
                 if(period == 1){
                     start = secondAfy(8,30,00);
-                    end = secondAfy(9,53,00);
+                    end = secondAfy(9,57,00);
                     current = sub(sec,end);
                     updatescreen(period,timeAfy(current),lunch,'Period ends in');
                 }
