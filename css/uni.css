@@ -112,12 +112,11 @@
 }
 
 .item {
-    height: 3px;
+    height: 10px;
     width: 10px;
     background: var(--firstcolor);
-    margin: 5px;
     border-radius: 25px;
-    
+
 }
 
 .item.boxshadow{
@@ -125,54 +124,36 @@
 }
 
 .item1 {
-    animation: load infinite .7s ease-in-out .1s;
-}
-.item2 {
-    animation: load infinite .7s ease-in-out .2s;
-}
-.item3 {
-    animation: load infinite .7s ease-in-out .3s;
-}
-.item4 {
-    animation: load infinite .7s ease-in-out .4s;
-}
-.item5 {
-    animation: load infinite .7s ease-in-out .5s;
-}
-.item6 {
-    animation: load infinite .7s ease-in-out .6s;
-}
-.item7 {
-    animation: load infinite .7s ease-in-out .7s;
-}
-.item8 {
-    animation: load infinite .7s ease-in-out .8s;
-}
-.item9 {
-    animation: load infinite .7s ease-in-out .9s;
-}
-.item10 {
-    animation: load infinite .7s ease-in-out 01s; 
+    position: fixed;
+    top: 50%;
+    transform: translate(-5px, -50%);
+    animation: load infinite 2s ease-in-out;
 }
 
 @keyframes load {
-    0% {
-        transform: translatey(0px);
+    0%{
+        width: 50%;
+        left: 25%;
     }
-    25% {
-        transform: translatey(10px);
-        height: 25px;
+
+    25%{
+        width: 2%;
+
     }
+
     50% {
-        height: 10px;
-        transform: translatey(0px)
+        width: 50%;
+        right: 25%;
     }
-    75%{
-        height: 25px;
-        transform: translatey(-10px)
+
+    75% {
+        width: 2%;
+        
     }
+
     100%{
-        transform: translatey(0px)
+        width: 50%;
+        right: 25%;
     }
 }
 
@@ -217,6 +198,7 @@
   margin-bottom: 10px;
   border-radius: 10px;
   height: 25px;
+  transition: ease-in-out .4s;
 
 }
 
