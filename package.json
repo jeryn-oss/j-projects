@@ -19,7 +19,7 @@
   "dependencies": {
     "confetti-js": "^0.0.18",
     "jquery": "^3.6.0",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "swup": "^2.0.14"
   }
 }
