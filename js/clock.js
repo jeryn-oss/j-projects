@@ -290,24 +290,24 @@ function calc(sec) {
             }
             if (lunchtime == true) {
                 if (lunch == 'a') {
-                    if (secondAfy(11, 55, 00) >= sec && sec >= secondAfy(11, 25, 00)) {
-                        start = secondAfy(11, 25, 00);
-                        end = secondAfy(11, 55, 00);
+                    if (secondAfy(11, 58, 00) >= sec && sec >= secondAfy(11, 28, 00)) {
+                        start = secondAfy(11, 28, 00);
+                        end = secondAfy(11, 58, 00);
                         current = sub(sec, end);
                         updatescreen(period, timeAfy(current), lunch, 'Lunch ends in');
                     } else lunchtime = false;
                 }
                 if (lunch == 'b') {
-                    if (secondAfy(11, 55, 00) <= sec && sec <= secondAfy(12, 25, 00)) {
-                        start = secondAfy(11, 55, 00);
-                        end = secondAfy(12, 25, 00);
+                    if (secondAfy(11, 58, 00) <= sec && sec <= secondAfy(12, 28, 00)) {
+                        start = secondAfy(11, 58, 00);
+                        end = secondAfy(12, 28, 00);
                         current = sub(sec, end);
                         updatescreen(period, timeAfy(current), lunch, 'Lunch ends in');
                     } else lunchtime = false;
                 }
                 if (lunch == 'c') {
-                    if (secondAfy(12, 25, 00) <= sec && sec <= secondAfy(12, 58, 00)) {
-                        start = secondAfy(12, 25, 00);
+                    if (secondAfy(12, 28, 00) <= sec && sec <= secondAfy(12, 58, 00)) {
+                        start = secondAfy(12, 28, 00);
                         end = secondAfy(12, 58, 00);
                         current = sub(sec, end);
                         updatescreen(period, timeAfy(current), lunch, 'Lunch ends in');
