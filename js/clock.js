@@ -29,20 +29,6 @@ var passingnum = 0;
 var mintest = 25;
 var hourtest = 11;
 var periodsub;
-startloader();
-function startloader() {
-    setInterval(() => {
-        $('.loader').css('opacity', 0)
-        setInterval(() => {
-            if ($('.loader').hasClass('loadview')) {
-                $('.loader').removeClass('loadview')
-            }
-        }, 400);
-    }, 3000);
-}
-
-getdaynum();
-
 var days = {
     Aug:
     {
@@ -190,13 +176,29 @@ var days = {
         16: 3,
     }
 }
+day = getdaynum();
+startloader();
+function startloader() {
+    setInterval(() => {
+        $('.loader').css('opacity', 0)
+        setInterval(() => {
+            if ($('.loader').hasClass('loadview')) {
+                $('.loader').removeClass('loadview')
+            }
+        }, 400);
+    }, 3000);
+}
 
+
+
+
+getdaynum();
 function getdaynum() {
-    var month = (moment().format('MMM')).toString();
-    var day = moment().format('D');
-    var daynum = days;
+    var month = moment().format('MMM');
+    var dayl = moment().format('D');
+    var daynum = days[month][dayl];
 
-    console.log(days)
+    return daynum;
 }
 
 function clock() {
@@ -206,7 +208,7 @@ function clock() {
 }
 
 function calc(sec) {
-    if (day != 0) {
+    if (day != 0 || day != 5) {
         //period code 
         getperiod(sec);
         if (endofday == true) {
@@ -277,8 +279,8 @@ function calc(sec) {
                     }
                 }
                 else if (passingnum == 'path2') {
-                    start = secondAfy(09, 09, 00);
-                    end = secondAfy(09, 14, 00);
+                    start = secondAfy(13, 22, 00);
+                    end = secondAfy(13, 29, 00);
                     current = sub(sec, end);
                     updatescreen(period, timeAfy(current), lunch, 'Passing period ends in');
                     if (current <= 0) {
@@ -322,14 +324,14 @@ function calc(sec) {
             }
             if (Passing != true) {
                 if (period == "p1") {
-                    start = secondAfy(8, 30, 00);
-                    end = secondAfy(9, 09, 00);
+                    start = secondAfy(13, 37, 00);
+                    end = secondAfy(14, 22, 00);
                     current = sub(sec, end);
                     updatescreen(1, timeAfy(current), lunch, 'Pathways A ends in');
                 }
                 if (period == "p2") {
-                    start = secondAfy(9, 14, 00);
-                    end = secondAfy(9, 53, 00);
+                    start = secondAfy(14, 29, 00);
+                    end = secondAfy(15, 00, 00);
                     current = sub(sec, end);
                     updatescreen(1, timeAfy(current), lunch, 'Pathways B ends in');
                 }
@@ -404,8 +406,14 @@ function calc(sec) {
                 }
             }
         }
-    } else {
+    } else if (day == 0) {
         updatescreen(period, clockAfy(time), lunch, 'Weekend Baby!');
+    }
+    else if (day == 5) {
+        updatescreen(period, clockAfy(time), lunch, 'Holiday Baby!');
+    }
+    else {
+        updatescreen(period, clockAfy(time), lunch, 'School is not in session');
     }
 }
 
@@ -420,26 +428,11 @@ function getperiod(sec) {
         Passing = true
         passingnum = 0;
     }
-    if (day == 2) {
-        if (secondAfy(08, 30, 00) <= sec) {
-            Passing = false
-            period = "p1";
-        }
-        if (secondAfy(09, 09, 00) <= sec) {
-            Passing = true;
-            passingnum = 'path2';
-            period = "p2";
-        }
-        if (secondAfy(09, 14, 00) <= sec) {
-            Passing = false
-            period = "p2";
-        }
-    } else {
-        if (secondAfy(08, 30, 00) <= sec) {
-            Passing = false
-            period = 1;
-        }
+    if (secondAfy(08, 30, 00) <= sec) {
+        Passing = false
+        period = 1;
     }
+
 
     if (secondAfy(09, 57, 00) <= sec) {
         Passing = true;
@@ -543,10 +536,27 @@ function getperiod(sec) {
         Passing = true;
         period = 4;
     }
-    if (secondAfy(13, 37, 00) <= sec) {
+    if (day == 2) {
+        if (secondAfy(13, 37, 00) <= sec) {
+            Passing = false
+            period = "p1";
+        }
+        if (secondAfy(14, 22, 00) <= sec) {
+            Passing = true;
+            passingnum = 'path2';
+            period = "p2";
+        }
+        if (secondAfy(14, 30, 00) <= sec) {
+            Passing = false
+            period = "p2";
+        }
+    }else{
+        if (secondAfy(13, 37, 00) <= sec) {
         Passing = false
         period = 4
     }
+    }
+    
     if (secondAfy(15, 00, 00) < sec || sec > secondAfy(00, 00, 00) && sec < secondAfy(8, 00, 00)) {
         endofday = true;
         period = 0;
