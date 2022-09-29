@@ -55,9 +55,6 @@
     justify-content: center;
 }
 
-.lunchbtn{
-    color: var(--ptextcolor);
-}
 
 .lunchbtn.hoveraffect:hover{
     color: var(--basetext);
@@ -74,12 +71,11 @@
     justify-content: center;
     align-items: center;
     background: var(--backgroundcolorlighter);
-    padding: 0px;
     margin: 5px;
     height: 40px;
     width: 40px;
     border-radius: 25px;
-    transition: ease-in-out .2s;
+    transition: ease-in-out .3s;
 }
 
 .periodcircles.boxshadow{
@@ -89,7 +85,6 @@
  
 .activecircle {
     background: var(--firstcolor);
-    color: var(--basetext);
     box-shadow: 0px 0px 10px rgb(0, 0, 0), 0px 0px 7px var(--firstcolor);
 }
 
@@ -102,7 +97,7 @@
     margin-top: 20px;
     border-radius: 5px;
     background: var(--backgroundcolorlighter);
-    transition: ease-in-out .2s;
+    transition: ease-in-out .3s;
 }
 
 .clockbar.boxshadow{
@@ -113,7 +108,7 @@
     width: 0%;
     border-radius: 5px;
     background:  var(--firstcolor);
-    transition: ease-in-out .2s;
+    transition: ease-in-out .3s;
     box-shadow: 0px 0px 3px var(--firstcolor);
 }
 
@@ -128,7 +123,15 @@
     width: 100%;
 }
 
-
+.lunchbtn{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    color: var(--ptextcolor);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
 
 @media only screen and (max-width: 700px) {
     .clockbarholder {

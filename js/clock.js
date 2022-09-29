@@ -20,6 +20,7 @@ var Passing;
 var day = 1;
 var progresstheme = progressSet('get');
 var lunch = lunchfunc('var');
+var background = backgroundw('get');
 var lunchtime = false;
 var start;
 var current;
@@ -174,8 +175,46 @@ var days = {
         14: 0,
         15: 0,
         16: 3,
+        17: 2,
+        18: 1,
+        19: 2,
+        20: 1,
+        21: 0,
+        22: 0,
+        23: 2,
+        24: 1,
+        25: 2,
+        26: 1,
+        27: 2,
+        28: 0,
+        29: 0,
+        30: 1,
+        31: 2,
+    },
+    Feb:
+    {
+        1: 1,
+        2: 2,
+        3: 1,
+        4: 0,
+        5: 0,
+        6: 2,
+        7: 1,
+        8: 2,
+        9: 1,
+        10: 2,
+        11: 0,
+        12: 0,
+        13: 1,
+        14: 2,
+        15: 1,
+        16: 2,
+        17: 1,
+
     }
 }
+var colorview = 0;
+
 day = getdaynum();
 startloader();
 function startloader() {
@@ -208,7 +247,7 @@ function clock() {
 }
 
 function calc(sec) {
-    if (day != 0 || day != 5) {
+    if (day == 1 || day == 2) {
         //period code 
         getperiod(sec);
         if (endofday == true) {
@@ -409,13 +448,17 @@ function calc(sec) {
     } else if (day == 0) {
         updatescreen(period, clockAfy(time), lunch, 'Weekend Baby!');
     }
+    if (day == 4) {
+        updatescreen(period, clockAfy(time), lunch, 'Eleaning Day!');
+    }
     else if (day == 5) {
         updatescreen(period, clockAfy(time), lunch, 'Holiday Baby!');
     }
-    else {
+    else if (day != 1 && day != 2){
         updatescreen(period, clockAfy(time), lunch, 'School is not in session');
     }
 }
+
 
 
 function sub(end, start) {
@@ -875,7 +918,6 @@ function clockAfy(timein) {
     return timein.substring(0, 2) + ':' + timein.substring(2, 4) + ':' + timein.substring(4, 6)
 }
 
-var colorview = 0;
 function opencolor(o) {
     if (o == "click" && colorview == 1) {
         $('.colorbtn').removeClass('active');
@@ -968,5 +1010,92 @@ function setprogress(prog) {
         $('.colorbtn').addClass('boxshadow')
         $('.clockbar').addClass('boxshadow')
         $('.clockprogress').addClass('boxshadow')
+    }
+}
+
+function backgroundw(type){
+    if(type == 'get'){
+        var local = localStorage.getItem('background')
+        if(local){
+            if(local == 'base'){
+                $('body').css('background', 'var(--backgroundcolor)')
+                $('.base').addClass('activeback')
+            }
+            else if(local == 'mountain-ice'){
+                $('body').css({'background': 'url(/img/mountain.jpg)','background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center'})
+                $('.mountain-ice').addClass('activeback')
+            }
+            else if(local == 'mountain-app'){
+                $('body').css({'background': 'url(/img/mountain2.jpg)','background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center'})
+                $('.mountain-app').addClass('activeback')
+            }
+            else if(local == 'forest'){
+                $('body').css({'background': 'url(/img/forest.jpg)','background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center'})
+                $('.forest').addClass('activeback')
+            }
+            else{
+                localStorage.removeItem('background')
+                localStorage.removeItem('setupbackground')
+                localStorage.setItem('setupbackground', 'base')
+                $('body').css('background', 'var(--backgroundcolor)')
+                $('.base').addClass('activeback')
+            }
+        }else{
+            localStorage.setItem('background', 'base')
+        }
+    }else{
+        localStorage.setItem('background', type)
+        if(type == 'base'){
+            $('body').css('background', 'var(--backgroundcolor)')
+            if($('.mountain-ice').hasClass('activeback')){
+                $('.mountain-ice').removeClass('activeback')
+            }
+            if($('.mountain-app').hasClass('activeback')){
+                $('.mountain-app').removeClass('activeback')
+            }
+            if($('.forest').hasClass('activeback')){
+                $('.forest').removeClass('activeback')
+            }
+            $('.base').addClass('activeback')
+        }
+        else if(type == 'mountain-ice'){
+            $('body').css({'background': 'url(/img/mountain.jpg)','background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center'})
+            if($('.base').hasClass('activeback')){
+                $('.base').removeClass('activeback')
+            }
+            if($('.mountain-app').hasClass('activeback')){
+                $('.mountain-app').removeClass('activeback')
+            }
+            if($('.forest').hasClass('activeback')){
+                $('.forest').removeClass('activeback')
+            }
+            $('.mountain-ice').addClass('activeback')
+        }
+        else if(type == 'mountain-app'){
+            $('body').css({'background': 'url(/img/mountain2.jpg)','background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center'})
+            if($('.base').hasClass('activeback')){
+                $('.base').removeClass('activeback')
+            }
+            if($('.mountain-ice').hasClass('activeback')){
+                $('.mountain-ice').removeClass('activeback')
+            }
+            if($('.forest').hasClass('activeback')){
+                $('.forest').removeClass('activeback')
+            }
+            $('.mountain-app').addClass('activeback')
+        }
+        else if(type == 'forest'){
+            $('body').css({'background': 'url(/img/forest.jpg)','background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center'})
+            if($('.base').hasClass('activeback')){
+                $('.base').removeClass('activeback')
+            }
+            if($('.mountain-ice').hasClass('activeback')){
+                $('.mountain-ice').removeClass('activeback')
+            }
+            if($('.mountain-app').hasClass('activeback')){
+                $('.mountain-app').removeClass('activeback')
+            }
+            $('.forest').addClass('activeback')
+        }
     }
 }
