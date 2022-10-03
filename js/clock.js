@@ -454,7 +454,7 @@ function calc(sec) {
     else if (day == 5) {
         updatescreen(period, clockAfy(time), lunch, 'Holiday Baby!');
     }
-    else if (day != 1 && day != 2){
+    else if (day != 1 && day != 2) {
         updatescreen(period, clockAfy(time), lunch, 'School is not in session');
     }
 }
@@ -470,6 +470,7 @@ function getperiod(sec) {
     if (secondAfy(08, 00, 00) <= sec) {
         Passing = true
         passingnum = 0;
+        endofday = false
     }
     if (secondAfy(08, 30, 00) <= sec) {
         Passing = false
@@ -593,13 +594,13 @@ function getperiod(sec) {
             Passing = false
             period = "p2";
         }
-    }else{
+    } else {
         if (secondAfy(13, 37, 00) <= sec) {
-        Passing = false
-        period = 4
+            Passing = false
+            period = 4
+        }
     }
-    }
-    
+
     if (secondAfy(15, 00, 00) < sec || sec > secondAfy(00, 00, 00) && sec < secondAfy(8, 00, 00)) {
         endofday = true;
         period = 0;
@@ -1013,86 +1014,86 @@ function setprogress(prog) {
     }
 }
 
-function backgroundw(type){
-    if(type == 'get'){
+function backgroundw(type) {
+    if (type == 'get') {
         var local = localStorage.getItem('background')
-        if(local){
-            if(local == 'base'){
+        if (local) {
+            if (local == 'base') {
                 $('body').css('background', 'var(--backgroundcolor)')
                 $('.base').addClass('activeback')
             }
-            else if(local == 'mountain-ice'){
-                $('body').css({'background': 'url(/img/mountain.jpg)','background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center'})
+            else if (local == 'mountain-ice') {
+                $('body').css({ 'background': 'url(/img/mountain.jpg)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center' })
                 $('.mountain-ice').addClass('activeback')
             }
-            else if(local == 'mountain-app'){
-                $('body').css({'background': 'url(/img/mountain2.jpg)','background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center'})
+            else if (local == 'mountain-app') {
+                $('body').css({ 'background': 'url(/img/mountain2.jpg)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center' })
                 $('.mountain-app').addClass('activeback')
             }
-            else if(local == 'forest'){
-                $('body').css({'background': 'url(/img/forest.jpg)','background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center'})
+            else if (local == 'forest') {
+                $('body').css({ 'background': 'url(/img/forest.jpg)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center' })
                 $('.forest').addClass('activeback')
             }
-            else{
+            else {
                 localStorage.removeItem('background')
                 localStorage.removeItem('setupbackground')
                 localStorage.setItem('setupbackground', 'base')
                 $('body').css('background', 'var(--backgroundcolor)')
                 $('.base').addClass('activeback')
             }
-        }else{
+        } else {
             localStorage.setItem('background', 'base')
         }
-    }else{
+    } else {
         localStorage.setItem('background', type)
-        if(type == 'base'){
+        if (type == 'base') {
             $('body').css('background', 'var(--backgroundcolor)')
-            if($('.mountain-ice').hasClass('activeback')){
+            if ($('.mountain-ice').hasClass('activeback')) {
                 $('.mountain-ice').removeClass('activeback')
             }
-            if($('.mountain-app').hasClass('activeback')){
+            if ($('.mountain-app').hasClass('activeback')) {
                 $('.mountain-app').removeClass('activeback')
             }
-            if($('.forest').hasClass('activeback')){
+            if ($('.forest').hasClass('activeback')) {
                 $('.forest').removeClass('activeback')
             }
             $('.base').addClass('activeback')
         }
-        else if(type == 'mountain-ice'){
-            $('body').css({'background': 'url(/img/mountain.jpg)','background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center'})
-            if($('.base').hasClass('activeback')){
+        else if (type == 'mountain-ice') {
+            $('body').css({ 'background': 'url(/img/mountain.jpg)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center' })
+            if ($('.base').hasClass('activeback')) {
                 $('.base').removeClass('activeback')
             }
-            if($('.mountain-app').hasClass('activeback')){
+            if ($('.mountain-app').hasClass('activeback')) {
                 $('.mountain-app').removeClass('activeback')
             }
-            if($('.forest').hasClass('activeback')){
+            if ($('.forest').hasClass('activeback')) {
                 $('.forest').removeClass('activeback')
             }
             $('.mountain-ice').addClass('activeback')
         }
-        else if(type == 'mountain-app'){
-            $('body').css({'background': 'url(/img/mountain2.jpg)','background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center'})
-            if($('.base').hasClass('activeback')){
+        else if (type == 'mountain-app') {
+            $('body').css({ 'background': 'url(/img/mountain2.jpg)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center' })
+            if ($('.base').hasClass('activeback')) {
                 $('.base').removeClass('activeback')
             }
-            if($('.mountain-ice').hasClass('activeback')){
+            if ($('.mountain-ice').hasClass('activeback')) {
                 $('.mountain-ice').removeClass('activeback')
             }
-            if($('.forest').hasClass('activeback')){
+            if ($('.forest').hasClass('activeback')) {
                 $('.forest').removeClass('activeback')
             }
             $('.mountain-app').addClass('activeback')
         }
-        else if(type == 'forest'){
-            $('body').css({'background': 'url(/img/forest.jpg)','background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center'})
-            if($('.base').hasClass('activeback')){
+        else if (type == 'forest') {
+            $('body').css({ 'background': 'url(/img/forest.jpg)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center' })
+            if ($('.base').hasClass('activeback')) {
                 $('.base').removeClass('activeback')
             }
-            if($('.mountain-ice').hasClass('activeback')){
+            if ($('.mountain-ice').hasClass('activeback')) {
                 $('.mountain-ice').removeClass('activeback')
             }
-            if($('.mountain-app').hasClass('activeback')){
+            if ($('.mountain-app').hasClass('activeback')) {
                 $('.mountain-app').removeClass('activeback')
             }
             $('.forest').addClass('activeback')
