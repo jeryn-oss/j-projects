@@ -96,8 +96,8 @@ var days = {
         2: 1,
         3: 2,
         4: 1,
-        5: 0,
-        6: 0,
+        5: 2,
+        6: 1,
         7: 2,
         8: 1,
         9: 2,
@@ -214,8 +214,8 @@ var days = {
     }
 }
 var colorview = 0;
-
 day = getdaynum();
+
 startloader();
 function startloader() {
     setInterval(() => {
@@ -238,6 +238,14 @@ function getdaynum() {
     var daynum = days[month][dayl];
 
     return daynum;
+}
+
+var testtime = 40520;
+
+function test() {
+    var secs = testtime;
+    calc(secs);
+    testtime = testtime + 23;
 }
 
 function clock() {
@@ -366,13 +374,13 @@ function calc(sec) {
                     start = secondAfy(13, 37, 00);
                     end = secondAfy(14, 22, 00);
                     current = sub(sec, end);
-                    updatescreen(1, timeAfy(current), lunch, 'Pathways A ends in');
+                    updatescreen(4, timeAfy(current), lunch, 'Pathways A ends in');
                 }
                 if (period == "p2") {
                     start = secondAfy(14, 29, 00);
                     end = secondAfy(15, 00, 00);
                     current = sub(sec, end);
-                    updatescreen(1, timeAfy(current), lunch, 'Pathways B ends in');
+                    updatescreen(4, timeAfy(current), lunch, 'Pathways B ends in');
                 }
                 if (period == 1) {
                     start = secondAfy(8, 30, 00);
