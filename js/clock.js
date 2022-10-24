@@ -1,1 +1,1111 @@
-var _0x237dd2=_0x3310;(function(_0x554581,_0x2fe569){var _0x13f2cb=_0x3310,_0x209320=_0x554581();while(!![]){try{var _0x51dc7c=-parseInt(_0x13f2cb(0x136))/0x1*(parseInt(_0x13f2cb(0xf5))/0x2)+-parseInt(_0x13f2cb(0x139))/0x3+parseInt(_0x13f2cb(0xb8))/0x4*(parseInt(_0x13f2cb(0x12a))/0x5)+-parseInt(_0x13f2cb(0x13a))/0x6+-parseInt(_0x13f2cb(0x126))/0x7+parseInt(_0x13f2cb(0x11f))/0x8+parseInt(_0x13f2cb(0xe9))/0x9;if(_0x51dc7c===_0x2fe569)break;else _0x209320['push'](_0x209320['shift']());}catch(_0x4b94fa){_0x209320['push'](_0x209320['shift']());}}}(_0x19d7,0x38a28));var currentcolor=setColor(_0x237dd2(0x133)),colorPicker=new iro['ColorPicker'](_0x237dd2(0xf9),{'width':0x96,'color':currentcolor});$(function(){var _0x11f642=_0x237dd2;for(var _0x4fc78f=0x1;_0x4fc78f<=0xc;_0x4fc78f++){$(_0x11f642(0xcb)+_0x4fc78f)[_0x11f642(0x104)](_0x11f642(0x134),$(_0x11f642(0xcb)+_0x4fc78f)['prop']('title'));}}),colorPicker['on'](_0x237dd2(0x132),function(_0x1cfc9c){var _0x2a5eea=_0x237dd2;setColor(_0x1cfc9c[_0x2a5eea(0xbb)]);});var time;const t=setInterval(clock,0xb4);var period=0x0,Passing,day=0x1,progresstheme=progressSet(_0x237dd2(0xd7)),lunch=lunchfunc(_0x237dd2(0xed)),background=backgroundw(_0x237dd2(0xd7)),lunchtime=![],start,current,end,endofday=![],passingnum=0x0,mintest=0x19,hourtest=0xb,periodsub,days={'Aug':{0x9:0x1,0xa:0x2,0xb:0x1,0xc:0x2,0xd:0x0,0xe:0x0,0xf:0x1,0x10:0x2,0x11:0x1,0x12:0x2,0x13:0x1,0x14:0x0,0x15:0x0,0x16:0x2,0x17:0x1,0x18:0x2,0x19:0x1,0x1a:0x2,0x1b:0x0,0x1c:0x0,0x1d:0x1,0x1e:0x2,0x1f:0x1},'Sep':{0x1:0x2,0x2:0x1,0x3:0x0,0x4:0x0,0x5:0x3,0x6:0x2,0x7:0x1,0x8:0x2,0x9:0x1,0xa:0x0,0xb:0x0,0xc:0x2,0xd:0x1,0xe:0x2,0xf:0x1,0x10:0x2,0x11:0x0,0x12:0x0,0x13:0x1,0x14:0x2,0x15:0x1,0x16:0x2,0x17:0x1,0x18:0x0,0x19:0x0,0x1a:0x2,0x1b:0x1,0x1c:0x2,0x1d:0x1,0x1e:0x4},'Oct':{0x1:0x2,0x2:0x1,0x3:0x2,0x4:0x1,0x5:0x2,0x6:0x1,0x7:0x2,0x8:0x1,0x9:0x2,0xa:0x1,0xb:0x2,0xc:0x5,0xd:0x1,0xe:0x2,0xf:0x0,0x10:0x0,0x11:0x1,0x12:0x2,0x13:0x1,0x14:0x2,0x15:0x1,0x16:0x2,0x17:0x5,0x18:0x5,0x19:0x5,0x1a:0x0,0x1b:0x0,0x1c:0x2,0x1d:0x1,0x1e:0x2},'Dec':{0x1:0x1,0x2:0x2,0x3:0x0,0x4:0x0,0x5:0x1,0x6:0x2,0x7:0x1,0x8:0x2,0x9:0x1,0xa:0x0,0xb:0x0,0xc:0x2,0xd:0x1,0xe:0x2,0xf:0x1,0x10:0x2,0x11:0x5,0x12:0x5,0x13:0x5,0x14:0x5,0x15:0x5,0x16:0x5,0x17:0x5,0x18:0x5,0x19:0x5,0x1a:0x5,0x1b:0x5,0x1c:0x5,0x1d:0x5,0x1e:0x5,0x1f:0x5},'Jan':{0x1:0x5,0x2:0x5,0x3:0x5,0x4:0x5,0x5:0x1,0x6:0x2,0x7:0x0,0x8:0x0,0x9:0x1,0xa:0x2,0xb:0x1,0xc:0x2,0xd:0x1,0xe:0x0,0xf:0x0,0x10:0x3,0x11:0x2,0x12:0x1,0x13:0x2,0x14:0x1,0x15:0x0,0x16:0x0,0x17:0x2,0x18:0x1,0x19:0x2,0x1a:0x1,0x1b:0x2,0x1c:0x0,0x1d:0x0,0x1e:0x1,0x1f:0x2},'Feb':{0x1:0x1,0x2:0x2,0x3:0x1,0x4:0x0,0x5:0x0,0x6:0x2,0x7:0x1,0x8:0x2,0x9:0x1,0xa:0x2,0xb:0x0,0xc:0x0,0xd:0x1,0xe:0x2,0xf:0x1,0x10:0x2,0x11:0x1}},colorview=0x0;day=getdaynum(),startloader();function startloader(){var _0x25db78=(function(){var _0x2c684a=!![];return function(_0x14ea0f,_0x4c716c){var _0x39309e=_0x2c684a?function(){var _0x32c57d=_0x3310;if(_0x4c716c){var _0x1d606a=_0x4c716c[_0x32c57d(0x106)](_0x14ea0f,arguments);return _0x4c716c=null,_0x1d606a;}}:function(){};return _0x2c684a=![],_0x39309e;};}()),_0x591a73=_0x25db78(this,function(){var _0x5c8cb9=_0x3310,_0x48f24b=function(){var _0x3bce98;try{_0x3bce98=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');')();}catch(_0x110ca1){_0x3bce98=window;}return _0x3bce98;},_0x4d6209=_0x48f24b(),_0x461b12=new RegExp(_0x5c8cb9(0x10c),'g'),_0x2c7e01=_0x5c8cb9(0x11c)['replace'](_0x461b12,'')[_0x5c8cb9(0x114)](';'),_0x1d47f6,_0x419a71,_0x2f2758,_0x28f299,_0x1c73b5=function(_0x14f28f,_0x17d1fc,_0x5c3750){var _0x431584=_0x5c8cb9;if(_0x14f28f[_0x431584(0xea)]!=_0x17d1fc)return![];for(var _0x23381b=0x0;_0x23381b<_0x17d1fc;_0x23381b++){for(var _0x47f96e=0x0;_0x47f96e<_0x5c3750[_0x431584(0xea)];_0x47f96e+=0x2){if(_0x23381b==_0x5c3750[_0x47f96e]&&_0x14f28f[_0x431584(0xca)](_0x23381b)!=_0x5c3750[_0x47f96e+0x1])return![];}}return!![];},_0x121f64=function(_0x389106,_0x5312c2,_0x11dffc){return _0x1c73b5(_0x5312c2,_0x11dffc,_0x389106);},_0x31ec22=function(_0x221e3a,_0x13f931,_0x312187){return _0x121f64(_0x13f931,_0x221e3a,_0x312187);},_0x41a96d=function(_0x209f03,_0x46d556,_0x485ee4){return _0x31ec22(_0x46d556,_0x485ee4,_0x209f03);};for(var _0x24099b in _0x4d6209){if(_0x1c73b5(_0x24099b,0x8,[0x7,0x74,0x5,0x65,0x3,0x75,0x0,0x64])){_0x1d47f6=_0x24099b;break;}}for(var _0x3ad9ea in _0x4d6209[_0x1d47f6]){if(_0x41a96d(0x6,_0x3ad9ea,[0x5,0x6e,0x0,0x64])){_0x419a71=_0x3ad9ea;break;}}for(var _0x1038fd in _0x4d6209[_0x1d47f6]){if(_0x31ec22(_0x1038fd,[0x7,0x6e,0x0,0x6c],0x8)){_0x2f2758=_0x1038fd;break;}}if(!('~'>_0x419a71))for(var _0x11c03b in _0x4d6209[_0x1d47f6][_0x2f2758]){if(_0x121f64([0x7,0x65,0x0,0x68],_0x11c03b,0x8)){_0x28f299=_0x11c03b;break;}}if(!_0x1d47f6||!_0x4d6209[_0x1d47f6])return;var _0x55fb03=_0x4d6209[_0x1d47f6][_0x419a71],_0x5d62ed=!!_0x4d6209[_0x1d47f6][_0x2f2758]&&_0x4d6209[_0x1d47f6][_0x2f2758][_0x28f299],_0x4b5735=_0x55fb03||_0x5d62ed;if(!_0x4b5735)return;var _0x3b4b1a=![];for(var _0x2a23e2=0x0;_0x2a23e2<_0x2c7e01['length'];_0x2a23e2++){var _0x419a71=_0x2c7e01[_0x2a23e2],_0x2b096d=_0x419a71[0x0]===String[_0x5c8cb9(0x105)](0x2e)?_0x419a71[_0x5c8cb9(0xfb)](0x1):_0x419a71,_0x283c26=_0x4b5735[_0x5c8cb9(0xea)]-_0x2b096d['length'],_0x8fe843=_0x4b5735[_0x5c8cb9(0x123)](_0x2b096d,_0x283c26),_0xa0f01a=_0x8fe843!==-0x1&&_0x8fe843===_0x283c26;_0xa0f01a&&((_0x4b5735[_0x5c8cb9(0xea)]==_0x419a71[_0x5c8cb9(0xea)]||_0x419a71[_0x5c8cb9(0x123)]('.')===0x0)&&(_0x3b4b1a=!![]));}if(!_0x3b4b1a){var _0x6d0f53=new RegExp(_0x5c8cb9(0x115),'g'),_0x3cf588='MFVXmafbXoeutm:dzblDankvyIBjRrKmrBrOcze'[_0x5c8cb9(0xff)](_0x6d0f53,'');_0x4d6209[_0x1d47f6][_0x2f2758]=_0x3cf588;}});_0x591a73(),setInterval(()=>{var _0x53ff70=_0x3310;$(_0x53ff70(0xba))['css'](_0x53ff70(0xf6),0x0),setInterval(()=>{var _0x5e8b87=_0x53ff70;$(_0x5e8b87(0xba))[_0x5e8b87(0xc2)]('loadview')&&$('.loader')['removeClass'](_0x5e8b87(0x118));},0x190);},0xbb8);}getdaynum();function _0x3310(_0x2599ba,_0x64299a){var _0x5da9df=_0x19d7();return _0x3310=function(_0x2bf5c3,_0x25b224){_0x2bf5c3=_0x2bf5c3-0xb8;var _0x3eeabf=_0x5da9df[_0x2bf5c3];return _0x3eeabf;},_0x3310(_0x2599ba,_0x64299a);}function getdaynum(){var _0x397a12=_0x237dd2,_0x29db43=moment()['format'](_0x397a12(0xf3)),_0x590707=moment()['format']('D'),_0x546443=days[_0x29db43][_0x590707];return _0x546443;}var testtime=0x9e48;function test(){var _0x2f0429=testtime;calc(_0x2f0429),testtime=testtime+0x17;}function clock(){var _0x4e2ea6=_0x237dd2;time=moment()[_0x4e2ea6(0x128)]('hhmmssa');var _0xfea423=secondAfy(time['substring'](0x0,0x2),time['substring'](0x2,0x4),time[_0x4e2ea6(0xda)](0x4,0x6),time[_0x4e2ea6(0xda)](0x6,0x8));calc(_0xfea423);}function calc(_0x11f96e){var _0x537d24=_0x237dd2;if(day==0x1||day==0x2){getperiod(_0x11f96e);if(endofday==!![])updatescreen(period,clockAfy(time),lunch,_0x537d24(0xd5));else{if(Passing==!![]){if(passingnum==0x0)start=secondAfy(0x8,0x0,0x0),end=secondAfy(0x8,0x1e,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0xdd)),current<=0x0&&(Passing=![]);else{if(passingnum==0x1)start=secondAfy(0x9,0x39,0x0),end=secondAfy(0xa,0x5,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,'Passing\x20period\x20ends\x20in'),current<=0x0&&(Passing=![]);else{if(passingnum==0x2)start=secondAfy(0xb,0x1c,0x0),end=secondAfy(0xb,0x24,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0xcc)),current<=0x0&&(Passing=![]);else{if(passingnum=='a')start=secondAfy(0xb,0x3a,0x0),end=secondAfy(0xc,0x6,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,'Passing\x20period\x20ends\x20in'),current<=0x0&&(Passing=![]);else{if(passingnum=='b')start=secondAfy(0xc,0x1c,0x0),end=secondAfy(0xc,0x21,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0xcc)),current<=0x0&&(Passing=![]);else{if(passingnum=='c')start=secondAfy(0xc,0x3a,0x0),end=secondAfy(0xd,0x3,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0xcc)),current<=0x0&&(Passing=![]);else{if(passingnum==0x3)start=secondAfy(0xd,0x1d,0x0),end=secondAfy(0xd,0x25,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0xcc)),current<=0x0&&(Passing=![]);else passingnum==_0x537d24(0xf0)&&(start=secondAfy(0xd,0x16,0x0),end=secondAfy(0xd,0x1d,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,'Passing\x20period\x20ends\x20in'),current<=0x0&&(Passing=![]));}}}}}}}if(lunchtime==!![]){if(lunch=='a'){if(secondAfy(0xb,0x3a,0x0)>=_0x11f96e&&_0x11f96e>=secondAfy(0xb,0x1c,0x0))start=secondAfy(0xb,0x1c,0x0),end=secondAfy(0xb,0x3a,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0xbe));else lunchtime=![];}if(lunch=='b'){if(secondAfy(0xb,0x3a,0x0)<=_0x11f96e&&_0x11f96e<=secondAfy(0xc,0x1c,0x0))start=secondAfy(0xb,0x3a,0x0),end=secondAfy(0xc,0x1c,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,'Lunch\x20ends\x20in');else lunchtime=![];}if(lunch=='c'){if(secondAfy(0xc,0x1c,0x0)<=_0x11f96e&&_0x11f96e<=secondAfy(0xc,0x3a,0x0))start=secondAfy(0xc,0x1c,0x0),end=secondAfy(0xc,0x3a,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0xbe));else lunchtime=![];}if(lunch=='d'){if(secondAfy(0xc,0x3b,0x0)<=_0x11f96e&&_0x11f96e<=secondAfy(0xd,0x1d,0x0))start=secondAfy(0xc,0x3b,0x0),end=secondAfy(0xd,0x1d,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0xbe));else lunchtime=![];}}if(Passing!=!![]){period=='p1'&&(start=secondAfy(0xd,0x25,0x0),end=secondAfy(0xe,0x16,0x0),current=sub(_0x11f96e,end),updatescreen(0x4,timeAfy(current),lunch,'Pathways\x20A\x20ends\x20in'));period=='p2'&&(start=secondAfy(0xe,0x1d,0x0),end=secondAfy(0xf,0x0,0x0),current=sub(_0x11f96e,end),updatescreen(0x4,timeAfy(current),lunch,_0x537d24(0xd1)));period==0x1&&(start=secondAfy(0x8,0x1e,0x0),end=secondAfy(0x9,0x39,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0x10a)));period==0x2&&(lunch=='a'?(start=secondAfy(0xa,0x5,0x0),end=secondAfy(0xb,0x1c,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,'lunch\x20starts\x20in')):(start=secondAfy(0xa,0x5,0x0),end=secondAfy(0xb,0x1c,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,'Period\x20ends\x20in')));if(lunchtime!=!![]){if(lunch=='a')period==0x3&&(start=secondAfy(0xc,0x6,0x0),end=secondAfy(0xd,0x1d,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0x10a)));else{if(lunch=='b'){if(period==0x3){if(periodsub==_0x537d24(0x120))start=secondAfy(0xb,0x24,0x0),end=secondAfy(0xb,0x3a,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0xc0));else periodsub==_0x537d24(0x107)&&(start=secondAfy(0xc,0x21,0x0),end=secondAfy(0xd,0x1d,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0x10a)));}}else{if(lunch=='c'||lunch=='d'){if(period==0x3){if(periodsub=='bcl')start=secondAfy(0xb,0x24,0x0),end=secondAfy(0xc,0x1c,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0xc0));else{if(periodsub==_0x537d24(0xbd))start=secondAfy(0xd,0x3,0x0),end=secondAfy(0xd,0x1d,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0x10a));else periodsub==_0x537d24(0x109)&&(start=secondAfy(0xb,0x24,0x0),end=secondAfy(0xc,0x3b,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,_0x537d24(0x130)));}}}}}}period==0x4&&(start=secondAfy(0xd,0x25,0x0),end=secondAfy(0xf,0x0,0x0),current=sub(_0x11f96e,end),updatescreen(period,timeAfy(current),lunch,'School\x20ends\x20in'));}}}else day==0x0&&updatescreen(period,clockAfy(time),lunch,'Weekend\x20Baby!');if(day==0x4)updatescreen(period,clockAfy(time),lunch,'Eleaning\x20Day!');else{if(day==0x5)updatescreen(period,clockAfy(time),lunch,_0x537d24(0x12f));else day!=0x1&&day!=0x2&&updatescreen(period,clockAfy(time),lunch,_0x537d24(0xe8));}}function sub(_0x24e012,_0x22894c){return parseInt(_0x22894c,0xa)-parseInt(_0x24e012,0xa);}function getperiod(_0x4b6821){var _0x551b46=_0x237dd2;secondAfy(0x8,0x0,0x0)<=_0x4b6821&&(Passing=!![],passingnum=0x0,endofday=![]),secondAfy(0x8,0x1e,0x0)<=_0x4b6821&&(Passing=![],period=0x1),secondAfy(0x9,0x39,0x0)<=_0x4b6821&&(Passing=!![],passingnum=0x1,period=0x2),secondAfy(0xa,0x5,0x0)<=_0x4b6821&&(period=0x2,Passing=![]),lunch=='a'&&(secondAfy(0xb,0x1c,0x0)<=_0x4b6821&&(lunchtime=!![],period=0x3),secondAfy(0xb,0x3a,0x0)<=_0x4b6821&&(passingnum='a',Passing=!![],period=0x3),secondAfy(0xc,0x6,0x0)<=_0x4b6821&&(period=0x3)),lunch=='b'&&(secondAfy(0xb,0x1c,0x0)<=_0x4b6821&&(lunchtime=![],Passing=!![],passingnum=0x2,period=0x3),secondAfy(0xb,0x24,0x0)<=_0x4b6821&&(Passing=![],period=0x3,periodsub=_0x551b46(0x120)),secondAfy(0xb,0x3a,0x0)<=_0x4b6821&&(lunchtime=!![],period=0x3),secondAfy(0xc,0x1c,0x0)<=_0x4b6821&&(lunchtime=![],Passing=!![],passingnum='b',period=0x3,periodsub=_0x551b46(0x107)),secondAfy(0xc,0x21,0x0)<=_0x4b6821&&(period=0x3,periodsub='abl')),lunch=='c'&&(secondAfy(0xb,0x1c,0x0)<=_0x4b6821&&(lunchtime=![],Passing=!![],passingnum=0x2,period=0x3),secondAfy(0xb,0x24,0x0)<=_0x4b6821&&(Passing=![],period=0x3,periodsub=_0x551b46(0xdf)),secondAfy(0xc,0x1c,0x0)<=_0x4b6821&&(lunchtime=!![],period=0x3),secondAfy(0xc,0x3a,0x0)<=_0x4b6821&&(lunchtime=![],Passing=!![],passingnum='c',period=0x3,periodsub=_0x551b46(0xbd)),secondAfy(0xd,0x3,0x0)<=_0x4b6821&&(period=0x3,periodsub=_0x551b46(0xbd))),lunch=='d'&&(secondAfy(0xb,0x1c,0x0)<=_0x4b6821&&(lunchtime=![],Passing=!![],passingnum=0x2,period=0x3),secondAfy(0xb,0x24,0x0)<=_0x4b6821&&(Passing=![],period=0x3,periodsub=_0x551b46(0x109)),secondAfy(0xc,0x3b,0x0)<=_0x4b6821&&(lunchtime=!![])),secondAfy(0xd,0x1d,0x0)<=_0x4b6821&&(lunchtime=![],passingnum=0x3,Passing=!![],period=0x4),day==0x2?(secondAfy(0xd,0x25,0x0)<=_0x4b6821&&(Passing=![],period='p1'),secondAfy(0xe,0x16,0x0)<=_0x4b6821&&(Passing=!![],passingnum=_0x551b46(0xf0),period='p2'),secondAfy(0xe,0x1e,0x0)<=_0x4b6821&&(Passing=![],period='p2')):secondAfy(0xd,0x25,0x0)<=_0x4b6821&&(Passing=![],period=0x4),(secondAfy(0xf,0x0,0x0)<_0x4b6821||_0x4b6821>secondAfy(0x0,0x0,0x0)&&_0x4b6821<secondAfy(0x8,0x0,0x0))&&(endofday=!![],period=0x0);}function updatescreen(_0x300e04,_0x1acfe9,_0x3a598e,_0x1c5007){var _0x1984d5=_0x237dd2;if(endofday==![])var _0x228205=Math[_0x1984d5(0xcf)]((current-(end-start))/(end-start)*0x64)+'%';else var _0x228205=_0x1984d5(0x117);day==0x0||endofday==!![]?($(_0x1984d5(0xdb))[_0x1984d5(0x104)](_0x1984d5(0xbf),_0x1984d5(0x122)),$(_0x1984d5(0xee))[_0x1984d5(0x104)](_0x1984d5(0x137),'var(--firstcolor)'),$(_0x1984d5(0xee))[_0x1984d5(0x104)](_0x1984d5(0xf7),_0x1984d5(0x138)),!$(_0x1984d5(0xb9))[_0x1984d5(0xc2)](_0x1984d5(0xde))&&$(_0x1984d5(0xee))[_0x1984d5(0x125)](_0x1984d5(0xde)),!$(_0x1984d5(0x12b))[_0x1984d5(0xc2)](_0x1984d5(0xde))&&$(_0x1984d5(0x12b))[_0x1984d5(0x125)]('end')):($(_0x1984d5(0xee))['css'](_0x1984d5(0x137),$('html')[_0x1984d5(0x104)]('--basetext')),$(_0x1984d5(0xdb))['css']('display',_0x1984d5(0xe5)),$('#time-till-end')[_0x1984d5(0x104)]('font-size',_0x1984d5(0xfe)),$(_0x1984d5(0xee))[_0x1984d5(0xd9)](_0x1984d5(0xde)),$(_0x1984d5(0x12b))['removeClass'](_0x1984d5(0xde))),day==0x1&&(!$('#day1')['hasClass'](_0x1984d5(0x108))&&$(_0x1984d5(0x103))[_0x1984d5(0x110)]('active'),_0x300e04==0x1&&(!$(_0x1984d5(0xe0))['hasClass'](_0x1984d5(0xc7))&&$(_0x1984d5(0xe0))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$('.period2')[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xf2))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0xe7))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xe7))[_0x1984d5(0x110)]('activecircle'),$(_0x1984d5(0xd0))['hasClass']('activecircle')&&$(_0x1984d5(0xd0))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0xd4))['hasClass'](_0x1984d5(0xc7))&&$(_0x1984d5(0xd4))['toggleClass'](_0x1984d5(0xc7)),$(_0x1984d5(0x11b))['hasClass'](_0x1984d5(0xc7))&&$(_0x1984d5(0x11b))[_0x1984d5(0x110)]('activecircle'),$(_0x1984d5(0xc6))[_0x1984d5(0xc2)]('activecircle')&&$(_0x1984d5(0xc6))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0x119))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0x119))['toggleClass']('activecircle')),_0x300e04==0x2&&($(_0x1984d5(0xe0))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xe0))['toggleClass'](_0x1984d5(0xc7)),!$('.period2')[_0x1984d5(0xc2)]('activecircle')&&$(_0x1984d5(0xf2))['toggleClass'](_0x1984d5(0xc7)),$(_0x1984d5(0xe7))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$('.period3')[_0x1984d5(0x110)]('activecircle'),$(_0x1984d5(0xd0))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xd0))['toggleClass'](_0x1984d5(0xc7)),$(_0x1984d5(0xd4))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$('.period5')[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0x11b))[_0x1984d5(0xc2)]('activecircle')&&$(_0x1984d5(0x11b))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0xc6))['hasClass'](_0x1984d5(0xc7))&&$(_0x1984d5(0xc6))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0x119))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$('.period8')[_0x1984d5(0x110)](_0x1984d5(0xc7))),_0x300e04==0x3&&($(_0x1984d5(0xe0))['hasClass'](_0x1984d5(0xc7))&&$(_0x1984d5(0xe0))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$('.period2')[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xf2))[_0x1984d5(0x110)](_0x1984d5(0xc7)),!$(_0x1984d5(0xe7))[_0x1984d5(0xc2)]('activecircle')&&$(_0x1984d5(0xe7))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0xd0))[_0x1984d5(0xc2)]('activecircle')&&$('.period4')['toggleClass'](_0x1984d5(0xc7)),$(_0x1984d5(0xd4))['hasClass']('activecircle')&&$(_0x1984d5(0xd4))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0x11b))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0x11b))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0xc6))['hasClass'](_0x1984d5(0xc7))&&$(_0x1984d5(0xc6))['toggleClass'](_0x1984d5(0xc7)),$(_0x1984d5(0x119))['hasClass']('activecircle')&&$(_0x1984d5(0x119))[_0x1984d5(0x110)](_0x1984d5(0xc7))),_0x300e04==0x4&&($(_0x1984d5(0xe0))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xe0))['toggleClass']('activecircle'),$('.period2')[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xf2))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0xe7))[_0x1984d5(0xc2)]('activecircle')&&$(_0x1984d5(0xe7))[_0x1984d5(0x110)](_0x1984d5(0xc7)),!$(_0x1984d5(0xd0))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xd0))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0xd4))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xd4))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0x11b))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$('.period6')[_0x1984d5(0x110)]('activecircle'),$(_0x1984d5(0xc6))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xc6))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$('.period8')[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0x119))[_0x1984d5(0x110)](_0x1984d5(0xc7)))),day==0x2&&(!$(_0x1984d5(0xc9))[_0x1984d5(0xc2)](_0x1984d5(0x108))&&$(_0x1984d5(0xc9))[_0x1984d5(0x110)](_0x1984d5(0x108)),_0x300e04==0x1&&($('.period1')[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$('.period1')[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0xf2))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xf2))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$('.period3')[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xe7))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0xd0))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xd0))[_0x1984d5(0x110)](_0x1984d5(0xc7)),!$(_0x1984d5(0xd4))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xd4))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0x11b))['hasClass'](_0x1984d5(0xc7))&&$(_0x1984d5(0x11b))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0xc6))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$('.period7')['toggleClass'](_0x1984d5(0xc7)),$(_0x1984d5(0x119))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$('.period8')['toggleClass'](_0x1984d5(0xc7))),_0x300e04==0x2&&($(_0x1984d5(0xe0))[_0x1984d5(0xc2)]('activecircle')&&$('.period1')[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0xf2))['hasClass'](_0x1984d5(0xc7))&&$(_0x1984d5(0xf2))['toggleClass'](_0x1984d5(0xc7)),$(_0x1984d5(0xe7))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$('.period3')[_0x1984d5(0x110)]('activecircle'),$(_0x1984d5(0xd0))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xd0))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$('.period5')[_0x1984d5(0xc2)]('activecircle')&&$(_0x1984d5(0xd4))[_0x1984d5(0x110)](_0x1984d5(0xc7)),!$(_0x1984d5(0x11b))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0x11b))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0xc6))['hasClass'](_0x1984d5(0xc7))&&$(_0x1984d5(0xc6))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0x119))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0x119))['toggleClass'](_0x1984d5(0xc7))),_0x300e04==0x3&&($(_0x1984d5(0xe0))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$('.period1')['toggleClass'](_0x1984d5(0xc7)),$(_0x1984d5(0xf2))['hasClass'](_0x1984d5(0xc7))&&$(_0x1984d5(0xf2))['toggleClass'](_0x1984d5(0xc7)),$(_0x1984d5(0xe7))[_0x1984d5(0xc2)]('activecircle')&&$('.period3')['toggleClass']('activecircle'),$(_0x1984d5(0xd0))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$('.period4')[_0x1984d5(0x110)](_0x1984d5(0xc7)),$('.period5')[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xd4))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0x11b))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0x11b))[_0x1984d5(0x110)](_0x1984d5(0xc7)),!$(_0x1984d5(0xc6))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xc6))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$('.period8')[_0x1984d5(0xc2)]('activecircle')&&$(_0x1984d5(0x119))[_0x1984d5(0x110)](_0x1984d5(0xc7))),_0x300e04==0x4&&($(_0x1984d5(0xe0))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xe0))['toggleClass']('activecircle'),$(_0x1984d5(0xf2))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$(_0x1984d5(0xf2))['toggleClass'](_0x1984d5(0xc7)),$('.period3')[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$('.period3')['toggleClass']('activecircle'),$(_0x1984d5(0xd0))[_0x1984d5(0xc2)](_0x1984d5(0xc7))&&$('.period4')['toggleClass'](_0x1984d5(0xc7)),$(_0x1984d5(0xd4))[_0x1984d5(0xc2)]('activecircle')&&$(_0x1984d5(0xd4))[_0x1984d5(0x110)]('activecircle'),$('.period6')[_0x1984d5(0xc2)]('activecircle')&&$(_0x1984d5(0x11b))[_0x1984d5(0x110)](_0x1984d5(0xc7)),$(_0x1984d5(0xc6))['hasClass'](_0x1984d5(0xc7))&&$(_0x1984d5(0xc6))['toggleClass'](_0x1984d5(0xc7)),!$(_0x1984d5(0x119))['hasClass'](_0x1984d5(0xc7))&&$('.period8')[_0x1984d5(0x110)](_0x1984d5(0xc7)))),$(_0x1984d5(0xe6))[_0x1984d5(0x104)](_0x1984d5(0xef),_0x228205),$(_0x1984d5(0x12b))[_0x1984d5(0x11e)](_0x1c5007),$(_0x1984d5(0xee))[_0x1984d5(0x11e)](_0x1acfe9);}function timeAfy(_0x1fa275){var _0x29f356=function(_0x199f99){return _0x199f99<0xa?'0'+_0x199f99:_0x199f99;};return _0x29f356(parseInt(_0x1fa275/(0x3c*0x3c)))+':'+_0x29f356(parseInt(_0x1fa275/0x3c%0x3c))+':'+_0x29f356(_0x1fa275%0x3c);}function secondAfy(_0x4e9423,_0x360af4,_0x494880,_0x360f5c){var _0x11d17b;if(_0x360f5c=='am')_0x4e9423==0xc?_0x11d17b=0x0:_0x11d17b=_0x4e9423*0x3c*0x3c;else _0x360f5c=='pm'?_0x4e9423==0xc?_0x11d17b=0xc*0x3c*0x3c:_0x11d17b=+(parseInt(_0x4e9423,0xa)+ +0xc)*0x3c*0x3c:_0x11d17b=_0x4e9423*0x3c*0x3c;var _0x27f2ca=_0x360af4*0x3c,_0x7dddf3=_0x494880,_0x47e220=parseInt(_0x11d17b,0xa)+parseInt(_0x27f2ca,0xa)+parseInt(_0x7dddf3,0xa);return _0x47e220;}function lunchfunc(_0x4f9fa0){var _0x2ac8d7=_0x237dd2;if(_0x4f9fa0==_0x2ac8d7(0xed)){var _0x14eaee=localStorage['getItem'](_0x2ac8d7(0x10d));if(_0x14eaee=='2'){var _0x68ce51=localStorage[_0x2ac8d7(0xbc)]('lunch');return $('.lunch'+_0x68ce51)[_0x2ac8d7(0x125)](_0x2ac8d7(0xc7)),$(_0x2ac8d7(0xf4)+_0x68ce51)['toggleClass']('hoveraffect'),localStorage[_0x2ac8d7(0xbc)](_0x2ac8d7(0x111));}else return localStorage['setItem'](_0x2ac8d7(0x10d),0x2),localStorage[_0x2ac8d7(0xeb)](_0x2ac8d7(0x111),'a'),$(_0x2ac8d7(0x12e))[_0x2ac8d7(0x125)](_0x2ac8d7(0xc7)),$(_0x2ac8d7(0x12e))['toggleClass'](_0x2ac8d7(0xe1)),'a';}else _0x4f9fa0!=lunch&&($(_0x2ac8d7(0xf4)+lunch)[_0x2ac8d7(0x110)]('activecircle'),$(_0x2ac8d7(0xf4)+lunch)[_0x2ac8d7(0x110)](_0x2ac8d7(0xe1)),$('.lunch'+_0x4f9fa0)['toggleClass'](_0x2ac8d7(0xc7)),$(_0x2ac8d7(0xf4)+_0x4f9fa0)[_0x2ac8d7(0x110)](_0x2ac8d7(0xe1)),lunch=_0x4f9fa0,localStorage[_0x2ac8d7(0xeb)](_0x2ac8d7(0x111),lunch));}function _0x19d7(){var _0x9c7090=['fromCharCode','apply','abl','active','bdl','Period\x20ends\x20in','(((.+)+)+)+$','[IMCNMUMkMTnObPrSpppBKLZbRVWLqfRWLgDOAZzUyWgjKpYHFziXHkNYVASbxSEFWArkENIMBVjXkZAIWBkHNEjmCmHrMOPDCNkLzMLmbnSDfWTXUVWnYgyIYSGSApOkKYOmXOxgz]','setup','.clockbar','no-repeat','toggleClass','lunch','url(/img/mountain.jpg)','.selector1','split','[MFVXmfXemdzDvyIBjRrKmrBrOcze]','boxshadow','100%','loadview','.period8','.periodcircles','.period6','IloMcaCNMlUMhokst;hsMTnesObPcrShepppduBKLlZbRVe.WLqfRWdLegDv;wwwO.hsesAcheZzdUuylWge.djKev;pYHFzwwiXHwkN.YVASbhxsSescEFhWedAurle.dkENeIMvBVjXkZAIWBkHNEjmCmHrMOPDCNkLzMLmbnSDfWTXUVWnYgyIYSGSApOkKYOmXOxgz','search','text','189480jPsDSA','bbl','.item','none','indexOf','toString','addClass','871276XnXSez','currenttheme','format','base','4955mgLsVb','#info','removeItem','#DC6985','.luncha','Holiday\x20Baby!','lunch\x20starts\x20in','click','color:change','start','background','center','178831oFffsN','color','50px','280293GHsxGa','583746ktDZaT','1124vwcMOD','.time-till-end','.loader','hexString','getItem','acl','Lunch\x20ends\x20in','display','Lunch\x20starts\x20in','body','hasClass','var(--backgroundcolor)','true','.mountain-app','.period7','activecircle','.selector3','#day2','charCodeAt','.colorcircle','Passing\x20period\x20ends\x20in','url(/img/mountain2.jpg)','.colorbtn','abs','.period4','Pathways\x20B\x20ends\x20in','.forest','url(/img/forest.jpg)','.period5','School\x27s\x20Out','forest','get','constructor','removeClass','substring','#clock','activeselector','School\x20starts\x20in','end','bcl','.period1','hoveraffect','mountain-ice','activeback','.base','flex','.clockprogress','.period3','School\x20is\x20not\x20in\x20session','3814569upbMux','length','setItem','setupbackground','var','#time-till-end','width','path2','--firstcolor','.period2','MMM','.lunch','2mjifUx','opacity','font-size','.mountain-ice','#picker','mountain-app','slice','verifytheme','.pickerholder','40px','replace','html','cover','setupcolor','#day1','css'];_0x19d7=function(){return _0x9c7090;};return _0x19d7();}function clockAfy(_0x1f3848){var _0x1eaf2c=_0x237dd2;return _0x1f3848['substring'](0x0,0x2)+':'+_0x1f3848[_0x1eaf2c(0xda)](0x2,0x4)+':'+_0x1f3848[_0x1eaf2c(0xda)](0x4,0x6);}function opencolor(_0x359986){var _0x26566b=_0x237dd2;_0x359986==_0x26566b(0x131)&&colorview==0x1&&($(_0x26566b(0xce))['removeClass'](_0x26566b(0x108)),$(_0x26566b(0xfd))['removeClass'](_0x26566b(0x108)),colorview=0x0),colorview==0x0?($(_0x26566b(0xce))[_0x26566b(0x125)]('active'),$(_0x26566b(0xfd))[_0x26566b(0x125)](_0x26566b(0x108)),colorview=0x1):($('.colorbtn')[_0x26566b(0xd9)](_0x26566b(0x108)),$(_0x26566b(0xfd))[_0x26566b(0xd9)](_0x26566b(0x108)),colorview=0x0);}function setColor(_0x2b9ce1){var _0xe00736=_0x237dd2,_0x29cfcd=(function(){var _0x22e77e=!![];return function(_0x15114d,_0x486843){var _0x8f4164=_0x22e77e?function(){var _0x51b04a=_0x3310;if(_0x486843){var _0x56c93f=_0x486843[_0x51b04a(0x106)](_0x15114d,arguments);return _0x486843=null,_0x56c93f;}}:function(){};return _0x22e77e=![],_0x8f4164;};}()),_0x102ae8=_0x29cfcd(this,function(){var _0x3fd7a2=_0x3310;return _0x102ae8[_0x3fd7a2(0x124)]()[_0x3fd7a2(0x11d)](_0x3fd7a2(0x10b))[_0x3fd7a2(0x124)]()[_0x3fd7a2(0xd8)](_0x102ae8)[_0x3fd7a2(0x11d)](_0x3fd7a2(0x10b));});return _0x102ae8(),_0x2b9ce1=='start'?getColor():($('html')['css']('--firstcolor',_0x2b9ce1),localStorage[_0xe00736(0xeb)](_0xe00736(0x137),_0x2b9ce1),_0x2b9ce1);}function getColor(){var _0x2df39d=_0x237dd2,_0x10f255=localStorage[_0x2df39d(0xbc)](_0x2df39d(0x102));return _0x10f255==0x2?($(_0x2df39d(0x100))[_0x2df39d(0x104)](_0x2df39d(0xf1),localStorage[_0x2df39d(0xbc)](_0x2df39d(0x137))),localStorage['getItem'](_0x2df39d(0x137))):(localStorage['setItem'](_0x2df39d(0x102),0x2),localStorage[_0x2df39d(0xeb)](_0x2df39d(0x137),_0x2df39d(0x12d)),_0x2df39d(0x12d));}function progressSet(_0x5a579d){var _0x27c9fa=_0x237dd2;_0x5a579d!=progresstheme&&_0x5a579d!=_0x27c9fa(0xd7)&&(!$(progresstheme)[_0x27c9fa(0xc2)]('no')&&($(progresstheme)['removeClass'](_0x27c9fa(0xdc)),$(progresstheme)[_0x27c9fa(0x125)]('no'),$(_0x5a579d)['removeClass']('no'),$(_0x5a579d)['addClass'](_0x27c9fa(0xdc)),progresstheme=_0x5a579d,localStorage[_0x27c9fa(0xeb)](_0x27c9fa(0x127),_0x5a579d)),_0x5a579d==_0x27c9fa(0x113)&&($('.item')['addClass'](_0x27c9fa(0x116)),$('.periodcircles')[_0x27c9fa(0x125)](_0x27c9fa(0x116)),$(_0x27c9fa(0xfd))[_0x27c9fa(0x125)](_0x27c9fa(0x116)),$(_0x27c9fa(0xce))[_0x27c9fa(0x125)](_0x27c9fa(0x116)),$(_0x27c9fa(0x10e))[_0x27c9fa(0x125)](_0x27c9fa(0x116)),$(_0x27c9fa(0xe6))[_0x27c9fa(0x125)](_0x27c9fa(0x116))),_0x5a579d==_0x27c9fa(0xc8)&&($(_0x27c9fa(0x121))['removeClass']('boxshadow'),$('.periodcircles')[_0x27c9fa(0xd9)](_0x27c9fa(0x116)),$(_0x27c9fa(0xfd))[_0x27c9fa(0xd9)](_0x27c9fa(0x116)),$(_0x27c9fa(0xce))[_0x27c9fa(0xd9)]('boxshadow'),$(_0x27c9fa(0x10e))[_0x27c9fa(0xd9)](_0x27c9fa(0x116)),$(_0x27c9fa(0xe6))[_0x27c9fa(0xd9)](_0x27c9fa(0x116))));if(_0x5a579d=='get'){var _0x1b99cb=localStorage[_0x27c9fa(0xbc)](_0x27c9fa(0xfc));return _0x1b99cb==_0x27c9fa(0xc4)?(setprogress(localStorage[_0x27c9fa(0xbc)](_0x27c9fa(0x127))),localStorage['getItem'](_0x27c9fa(0x127))):(localStorage[_0x27c9fa(0xeb)]('verifytheme',!![]),localStorage[_0x27c9fa(0xeb)]('currenttheme',_0x27c9fa(0xc8)),setprogress(_0x27c9fa(0xc8)),localStorage[_0x27c9fa(0xbc)](_0x27c9fa(0x127)));}}function setprogress(_0x16c901){var _0x5c60fc=_0x237dd2;$(_0x16c901)[_0x5c60fc(0x125)](_0x5c60fc(0xdc)),$(_0x16c901)[_0x5c60fc(0xd9)]('no'),_0x16c901=='.selector1'&&($(_0x5c60fc(0x121))[_0x5c60fc(0x125)]('boxshadow'),$(_0x5c60fc(0x11a))['addClass'](_0x5c60fc(0x116)),$('.pickerholder')[_0x5c60fc(0x125)](_0x5c60fc(0x116)),$(_0x5c60fc(0xce))['addClass'](_0x5c60fc(0x116)),$(_0x5c60fc(0x10e))[_0x5c60fc(0x125)](_0x5c60fc(0x116)),$('.clockprogress')[_0x5c60fc(0x125)](_0x5c60fc(0x116)));}function backgroundw(_0x299c84){var _0x1e5bcb=_0x237dd2;if(_0x299c84=='get'){var _0x25f8e5=localStorage[_0x1e5bcb(0xbc)]('background');if(_0x25f8e5){if(_0x25f8e5==_0x1e5bcb(0x129))$('body')[_0x1e5bcb(0x104)](_0x1e5bcb(0x134),_0x1e5bcb(0xc3)),$('.base')[_0x1e5bcb(0x125)](_0x1e5bcb(0xe3));else{if(_0x25f8e5==_0x1e5bcb(0xe2))$(_0x1e5bcb(0xc1))[_0x1e5bcb(0x104)]({'background':'url(/img/mountain.jpg)','background-size':_0x1e5bcb(0x101),'background-repeat':_0x1e5bcb(0x10f),'background-position':_0x1e5bcb(0x135)}),$(_0x1e5bcb(0xf8))[_0x1e5bcb(0x125)](_0x1e5bcb(0xe3));else{if(_0x25f8e5==_0x1e5bcb(0xfa))$(_0x1e5bcb(0xc1))[_0x1e5bcb(0x104)]({'background':_0x1e5bcb(0xcd),'background-size':_0x1e5bcb(0x101),'background-repeat':_0x1e5bcb(0x10f),'background-position':_0x1e5bcb(0x135)}),$(_0x1e5bcb(0xc5))['addClass'](_0x1e5bcb(0xe3));else _0x25f8e5==_0x1e5bcb(0xd6)?($(_0x1e5bcb(0xc1))['css']({'background':_0x1e5bcb(0xd3),'background-size':_0x1e5bcb(0x101),'background-repeat':_0x1e5bcb(0x10f),'background-position':'center'}),$(_0x1e5bcb(0xd2))[_0x1e5bcb(0x125)]('activeback')):(localStorage['removeItem'](_0x1e5bcb(0x134)),localStorage[_0x1e5bcb(0x12c)](_0x1e5bcb(0xec)),localStorage[_0x1e5bcb(0xeb)](_0x1e5bcb(0xec),_0x1e5bcb(0x129)),$(_0x1e5bcb(0xc1))[_0x1e5bcb(0x104)](_0x1e5bcb(0x134),'var(--backgroundcolor)'),$(_0x1e5bcb(0xe4))['addClass']('activeback'));}}}else localStorage[_0x1e5bcb(0xeb)](_0x1e5bcb(0x134),_0x1e5bcb(0x129));}else{localStorage[_0x1e5bcb(0xeb)](_0x1e5bcb(0x134),_0x299c84);if(_0x299c84=='base')$('body')[_0x1e5bcb(0x104)](_0x1e5bcb(0x134),_0x1e5bcb(0xc3)),$(_0x1e5bcb(0xf8))[_0x1e5bcb(0xc2)](_0x1e5bcb(0xe3))&&$(_0x1e5bcb(0xf8))[_0x1e5bcb(0xd9)](_0x1e5bcb(0xe3)),$(_0x1e5bcb(0xc5))[_0x1e5bcb(0xc2)](_0x1e5bcb(0xe3))&&$('.mountain-app')[_0x1e5bcb(0xd9)](_0x1e5bcb(0xe3)),$('.forest')[_0x1e5bcb(0xc2)](_0x1e5bcb(0xe3))&&$(_0x1e5bcb(0xd2))[_0x1e5bcb(0xd9)](_0x1e5bcb(0xe3)),$('.base')['addClass'](_0x1e5bcb(0xe3));else{if(_0x299c84==_0x1e5bcb(0xe2))$(_0x1e5bcb(0xc1))[_0x1e5bcb(0x104)]({'background':_0x1e5bcb(0x112),'background-size':_0x1e5bcb(0x101),'background-repeat':_0x1e5bcb(0x10f),'background-position':_0x1e5bcb(0x135)}),$('.base')[_0x1e5bcb(0xc2)](_0x1e5bcb(0xe3))&&$('.base')[_0x1e5bcb(0xd9)](_0x1e5bcb(0xe3)),$(_0x1e5bcb(0xc5))[_0x1e5bcb(0xc2)]('activeback')&&$(_0x1e5bcb(0xc5))[_0x1e5bcb(0xd9)](_0x1e5bcb(0xe3)),$(_0x1e5bcb(0xd2))[_0x1e5bcb(0xc2)](_0x1e5bcb(0xe3))&&$(_0x1e5bcb(0xd2))[_0x1e5bcb(0xd9)](_0x1e5bcb(0xe3)),$('.mountain-ice')[_0x1e5bcb(0x125)]('activeback');else{if(_0x299c84==_0x1e5bcb(0xfa))$('body')['css']({'background':_0x1e5bcb(0xcd),'background-size':'cover','background-repeat':_0x1e5bcb(0x10f),'background-position':'center'}),$('.base')[_0x1e5bcb(0xc2)]('activeback')&&$(_0x1e5bcb(0xe4))[_0x1e5bcb(0xd9)](_0x1e5bcb(0xe3)),$(_0x1e5bcb(0xf8))[_0x1e5bcb(0xc2)](_0x1e5bcb(0xe3))&&$('.mountain-ice')['removeClass'](_0x1e5bcb(0xe3)),$(_0x1e5bcb(0xd2))[_0x1e5bcb(0xc2)](_0x1e5bcb(0xe3))&&$('.forest')[_0x1e5bcb(0xd9)]('activeback'),$(_0x1e5bcb(0xc5))[_0x1e5bcb(0x125)](_0x1e5bcb(0xe3));else _0x299c84==_0x1e5bcb(0xd6)&&($(_0x1e5bcb(0xc1))[_0x1e5bcb(0x104)]({'background':_0x1e5bcb(0xd3),'background-size':_0x1e5bcb(0x101),'background-repeat':_0x1e5bcb(0x10f),'background-position':_0x1e5bcb(0x135)}),$(_0x1e5bcb(0xe4))[_0x1e5bcb(0xc2)](_0x1e5bcb(0xe3))&&$('.base')[_0x1e5bcb(0xd9)](_0x1e5bcb(0xe3)),$('.mountain-ice')[_0x1e5bcb(0xc2)](_0x1e5bcb(0xe3))&&$('.mountain-ice')[_0x1e5bcb(0xd9)](_0x1e5bcb(0xe3)),$(_0x1e5bcb(0xc5))[_0x1e5bcb(0xc2)](_0x1e5bcb(0xe3))&&$(_0x1e5bcb(0xc5))['removeClass'](_0x1e5bcb(0xe3)),$('.forest')[_0x1e5bcb(0x125)]('activeback'));}}}}
+var currentcolor = setColor('start');
+var colorPicker = new iro.ColorPicker('#picker', {
+    width: 150,
+    color: currentcolor
+});
+$(function () {
+    for (var i = 1; i <= 12; i++) {
+        $('.colorcircle' + i).css('background', $('.colorcircle' + i).prop('title'))
+    }
+});
+colorPicker.on('color:change', function (color) {
+    // log the current color as a HEX string
+    setColor((color.hexString));
+});
+
+var time;
+const t = setInterval(clock, 180);
+var period = 0;
+var Passing;
+var day = 1;
+var progresstheme = progressSet('get');
+var lunch = lunchfunc('var');
+var background = backgroundw('get');
+var lunchtime = false;
+var start;
+var current;
+var end;
+var endofday = false;
+var passingnum = 0;
+var mintest = 25;
+var hourtest = 11;
+var periodsub;
+var days = {
+    Aug:
+    {
+        9: 1,
+        10: 2,
+        11: 1,
+        12: 2,
+        13: 0,
+        14: 0,
+        15: 1,
+        16: 2,
+        17: 1,
+        18: 2,
+        19: 1,
+        20: 0,
+        21: 0,
+        22: 2,
+        23: 1,
+        24: 2,
+        25: 1,
+        26: 2,
+        27: 0,
+        28: 0,
+        29: 1,
+        30: 2,
+        31: 1,
+    },
+    Sep:
+    {
+        1: 2,
+        2: 1,
+        3: 0,
+        4: 0,
+        5: 3,
+        6: 2,
+        7: 1,
+        8: 2,
+        9: 1,
+        10: 0,
+        11: 0,
+        12: 2,
+        13: 1,
+        14: 2,
+        15: 1,
+        16: 2,
+        17: 0,
+        18: 0,
+        19: 1,
+        20: 2,
+        21: 1,
+        22: 2,
+        23: 1,
+        24: 0,
+        25: 0,
+        26: 2,
+        27: 1,
+        28: 2,
+        29: 1,
+        30: 4,
+    },
+    Oct:
+    {
+        1: 2,
+        2: 1,
+        3: 2,
+        4: 1,
+        5: 2,
+        6: 1,
+        7: 2,
+        8: 1,
+        9: 2,
+        10: 1,
+        11: 2,
+        12: 5,
+        13: 1,
+        14: 2,
+        15: 0,
+        16: 0,
+        17: 1,
+        18: 2,
+        19: 1,
+        20: 2,
+        21: 1,
+        22: 2,
+        23: 5,
+        24: 1,
+        25: 2,
+        26: 1,
+        27: 2,
+        28: 1,
+        29: 0,
+        30: 0,
+    },
+    Dec:
+    {
+        1: 1,
+        2: 2,
+        3: 0,
+        4: 0,
+        5: 1,
+        6: 2,
+        7: 1,
+        8: 2,
+        9: 1,
+        10: 0,
+        11: 0,
+        12: 2,
+        13: 1,
+        14: 2,
+        15: 1,
+        16: 2,
+        17: 5,
+        18: 5,
+        19: 5,
+        20: 5,
+        21: 5,
+        22: 5,
+        23: 5,
+        24: 5,
+        25: 5,
+        26: 5,
+        27: 5,
+        28: 5,
+        29: 5,
+        30: 5,
+        31: 5,
+    },
+    Jan:
+    {
+        1: 5,
+        2: 5,
+        3: 5,
+        4: 5,
+        5: 1,
+        6: 2,
+        7: 0,
+        8: 0,
+        9: 1,
+        10: 2,
+        11: 1,
+        12: 2,
+        13: 1,
+        14: 0,
+        15: 0,
+        16: 3,
+        17: 2,
+        18: 1,
+        19: 2,
+        20: 1,
+        21: 0,
+        22: 0,
+        23: 2,
+        24: 1,
+        25: 2,
+        26: 1,
+        27: 2,
+        28: 0,
+        29: 0,
+        30: 1,
+        31: 2,
+    },
+    Feb:
+    {
+        1: 1,
+        2: 2,
+        3: 1,
+        4: 0,
+        5: 0,
+        6: 2,
+        7: 1,
+        8: 2,
+        9: 1,
+        10: 2,
+        11: 0,
+        12: 0,
+        13: 1,
+        14: 2,
+        15: 1,
+        16: 2,
+        17: 1,
+
+    }
+}
+var colorview = 0;
+day = getdaynum();
+
+startloader();
+function startloader() {
+    setInterval(() => {
+        $('.loader').css('opacity', 0)
+        setInterval(() => {
+            if ($('.loader').hasClass('loadview')) {
+                $('.loader').removeClass('loadview')
+            }
+        }, 400);
+    }, 3000);
+}
+
+
+
+
+getdaynum();
+function getdaynum() {
+    var month = moment().format('MMM');
+    var dayl = moment().format('D');
+    var daynum = days[month][dayl];
+
+    return daynum;
+}
+
+var testtime = 40520;
+
+function test() {
+    var secs = testtime;
+    calc(secs);
+    testtime = testtime + 23;
+}
+
+function clock() {
+    time = moment().format('hhmmssa');
+    var secs = secondAfy(time.substring(0, 2), time.substring(2, 4), time.substring(4, 6), time.substring(6, 8));
+    calc(secs);
+}
+
+function calc(sec) {
+    if (day == 1 || day == 2) {
+        //period code 
+        getperiod(sec);
+        if (endofday == true) {
+            updatescreen(period, clockAfy(time), lunch, "School's Out");
+        } else {
+            if (Passing == true) {
+                if (passingnum == 0) {
+                    start = secondAfy(8, 00, 00);
+                    end = secondAfy(8, 30, 00);
+                    current = sub(sec, end);
+                    updatescreen(period, timeAfy(current), lunch, 'School starts in');
+                    if (current <= 0) {
+                        Passing = false;
+                    }
+                }
+                else if (passingnum == 1) {
+                    start = secondAfy(9, 57, 00);
+                    end = secondAfy(10, 05, 00);
+                    current = sub(sec, end);
+                    updatescreen(period, timeAfy(current), lunch, 'Passing period ends in');
+                    if (current <= 0) {
+                        Passing = false;
+                    }
+                }
+                else if (passingnum == 2) {
+                    start = secondAfy(11, 28, 00);
+                    end = secondAfy(11, 36, 00);
+                    current = sub(sec, end);
+                    updatescreen(period, timeAfy(current), lunch, 'Passing period ends in');
+                    if (current <= 0) {
+                        Passing = false;
+                    }
+                }
+                else if (passingnum == 'a') {
+                    start = secondAfy(11, 58, 00);
+                    end = secondAfy(12, 06, 00);
+                    current = sub(sec, end);
+                    updatescreen(period, timeAfy(current), lunch, 'Passing period ends in');
+                    if (current <= 0) {
+                        Passing = false;
+                    }
+                }
+                else if (passingnum == 'b') {
+                    start = secondAfy(12, 28, 00);
+                    end = secondAfy(12, 33, 00);
+                    current = sub(sec, end);
+                    updatescreen(period, timeAfy(current), lunch, 'Passing period ends in');
+                    if (current <= 0) {
+                        Passing = false;
+                    }
+                }
+                else if (passingnum == 'c') {
+                    start = secondAfy(12, 58, 00);
+                    end = secondAfy(13, 03, 00);
+                    current = sub(sec, end);
+                    updatescreen(period, timeAfy(current), lunch, 'Passing period ends in');
+                    if (current <= 0) {
+                        Passing = false;
+                    }
+                }
+                else if (passingnum == 3) {
+                    start = secondAfy(13, 29, 00);
+                    end = secondAfy(13, 37, 00);
+                    current = sub(sec, end);
+                    updatescreen(period, timeAfy(current), lunch, 'Passing period ends in');
+                    if (current <= 0) {
+                        Passing = false;
+                    }
+                }
+                else if (passingnum == 'path2') {
+                    start = secondAfy(13, 22, 00);
+                    end = secondAfy(13, 29, 00);
+                    current = sub(sec, end);
+                    updatescreen(period, timeAfy(current), lunch, 'Passing period ends in');
+                    if (current <= 0) {
+                        Passing = false;
+                    }
+                }
+            }
+            if (lunchtime == true) {
+                if (lunch == 'a') {
+                    if (secondAfy(11, 58, 00) >= sec && sec >= secondAfy(11, 28, 00)) {
+                        start = secondAfy(11, 28, 00);
+                        end = secondAfy(11, 58, 00);
+                        current = sub(sec, end);
+                        updatescreen(period, timeAfy(current), lunch, 'Lunch ends in');
+                    } else lunchtime = false;
+                }
+                if (lunch == 'b') {
+                    if (secondAfy(11, 58, 00) <= sec && sec <= secondAfy(12, 28, 00)) {
+                        start = secondAfy(11, 58, 00);
+                        end = secondAfy(12, 28, 00);
+                        current = sub(sec, end);
+                        updatescreen(period, timeAfy(current), lunch, 'Lunch ends in');
+                    } else lunchtime = false;
+                }
+                if (lunch == 'c') {
+                    if (secondAfy(12, 28, 00) <= sec && sec <= secondAfy(12, 58, 00)) {
+                        start = secondAfy(12, 28, 00);
+                        end = secondAfy(12, 58, 00);
+                        current = sub(sec, end);
+                        updatescreen(period, timeAfy(current), lunch, 'Lunch ends in');
+                    } else lunchtime = false;
+                }
+                if (lunch == 'd') {
+                    if (secondAfy(12, 59, 00) <= sec && sec <= secondAfy(13, 29, 00)) {
+                        start = secondAfy(12, 59, 00);
+                        end = secondAfy(13, 29, 00);
+                        current = sub(sec, end);
+                        updatescreen(period, timeAfy(current), lunch, 'Lunch ends in');
+                    } else lunchtime = false
+                }
+            }
+            if (Passing != true) {
+                if (period == "p1") {
+                    start = secondAfy(13, 37, 00);
+                    end = secondAfy(14, 22, 00);
+                    current = sub(sec, end);
+                    updatescreen(4, timeAfy(current), lunch, 'Pathways A ends in');
+                }
+                if (period == "p2") {
+                    start = secondAfy(14, 29, 00);
+                    end = secondAfy(15, 00, 00);
+                    current = sub(sec, end);
+                    updatescreen(4, timeAfy(current), lunch, 'Pathways B ends in');
+                }
+                if (period == 1) {
+                    start = secondAfy(8, 30, 00);
+                    end = secondAfy(9, 57, 00);
+                    current = sub(sec, end);
+                    updatescreen(period, timeAfy(current), lunch, 'Period ends in');
+                }
+                if (period == 2) {
+                    if (lunch == 'a') {
+                        start = secondAfy(10, 05, 00);
+                        end = secondAfy(11, 28, 00);
+                        current = sub(sec, end);
+                        updatescreen(period, timeAfy(current), lunch, 'lunch starts in');
+                    } else {
+                        start = secondAfy(10, 05, 00);
+                        end = secondAfy(11, 28, 00);
+                        current = sub(sec, end);
+                        updatescreen(period, timeAfy(current), lunch, 'Period ends in');
+                    }
+                }
+                if (lunchtime != true) {
+                    if (lunch == 'a') {
+                        if (period == 3) {
+                            start = secondAfy(12, 06, 00);
+                            end = secondAfy(13, 29, 00);
+                            current = sub(sec, end);
+                            updatescreen(period, timeAfy(current), lunch, 'Period ends in');
+                        }
+                    } else if (lunch == 'b') {
+                        if (period == 3) {
+                            if (periodsub == 'bbl') {
+                                start = secondAfy(11, 36, 00);
+                                end = secondAfy(11, 58, 00);
+                                current = sub(sec, end);
+                                updatescreen(period, timeAfy(current), lunch, 'Lunch starts in');
+                            } else if (periodsub == 'abl') {
+                                start = secondAfy(12, 33, 00);
+                                end = secondAfy(13, 29, 00);
+                                current = sub(sec, end);
+                                updatescreen(period, timeAfy(current), lunch, 'Period ends in');
+                            }
+                        }
+                    }
+                    else if (lunch == 'c' || lunch == 'd') {
+                        if (period == 3) {
+                            if (periodsub == 'bcl') {
+                                start = secondAfy(11, 36, 00);
+                                end = secondAfy(12, 28, 00);
+                                current = sub(sec, end);
+                                updatescreen(period, timeAfy(current), lunch, 'Lunch starts in');
+                            } else if (periodsub == 'acl') {
+                                start = secondAfy(13, 03, 00);
+                                end = secondAfy(13, 29, 00);
+                                current = sub(sec, end);
+                                updatescreen(period, timeAfy(current), lunch, 'Period ends in');
+                            } else if (periodsub == 'bdl') {
+                                start = secondAfy(11, 36, 00);
+                                end = secondAfy(12, 59, 00);
+                                current = sub(sec, end);
+                                updatescreen(period, timeAfy(current), lunch, 'lunch starts in');
+                            }
+                        }
+                    }
+                }
+                if (period == 4) {
+                    start = secondAfy(13, 37, 00);
+                    end = secondAfy(15, 00, 00);
+                    current = sub(sec, end);
+                    updatescreen(period, timeAfy(current), lunch, 'School ends in');
+                }
+            }
+        }
+    } else if (day == 0) {
+        updatescreen(period, clockAfy(time), lunch, 'Weekend Baby!');
+    }
+    if (day == 4) {
+        updatescreen(period, clockAfy(time), lunch, 'Eleaning Day!');
+    }
+    else if (day == 5) {
+        updatescreen(period, clockAfy(time), lunch, 'Holiday Baby!');
+    }
+    else if (day != 1 && day != 2) {
+        updatescreen(period, clockAfy(time), lunch, 'School is not in session');
+    }
+}
+
+
+
+function sub(end, start) {
+    return parseInt(start, 10) - parseInt(end, 10);
+}
+
+
+function getperiod(sec) {
+    if (secondAfy(08, 00, 00) <= sec) {
+        Passing = true
+        passingnum = 0;
+        endofday = false
+    }
+    if (secondAfy(08, 30, 00) <= sec) {
+        Passing = false
+        period = 1;
+    }
+
+
+    if (secondAfy(09, 57, 00) <= sec) {
+        Passing = true;
+        passingnum = 1;
+        period = 2;
+    }
+    if (secondAfy(10, 05, 00) <= sec) {
+        period = 2
+        Passing = false
+    }
+    if (lunch == 'a') {
+        if (secondAfy(11, 28, 00) <= sec) {
+            lunchtime = true;
+            period = 3;
+        }
+        if (secondAfy(11, 58, 00) <= sec) {
+            passingnum = 'a';
+            Passing = true;
+            period = 3;
+        }
+        if (secondAfy(12, 06, 00) <= sec) {
+            period = 3;
+        }
+    }
+    if (lunch == 'b') {
+        if (secondAfy(11, 28, 00) <= sec) {
+            lunchtime = false
+            Passing = true;
+            passingnum = 2;
+            period = 3;
+        }
+        if (secondAfy(11, 36, 00) <= sec) {
+            Passing = false
+            period = 3;
+            periodsub = 'bbl';
+        }
+        if (secondAfy(11, 58, 00) <= sec) {
+            lunchtime = true;
+            period = 3
+        }
+        if (secondAfy(12, 28, 00) <= sec) {
+            lunchtime = false;
+            Passing = true;
+            passingnum = 'b';
+            period = 3;
+            periodsub = 'abl';
+        }
+        if (secondAfy(12, 33, 00) <= sec) {
+            period = 3;
+            periodsub = 'abl';
+        }
+    }
+    if (lunch == 'c') {
+        if (secondAfy(11, 28, 00) <= sec) {
+            lunchtime = false
+            Passing = true;
+            passingnum = 2;
+            period = 3;
+        }
+        if (secondAfy(11, 36, 00) <= sec) {
+            Passing = false;
+            period = 3;
+            periodsub = 'bcl';
+        }
+        if (secondAfy(12, 28, 00) <= sec) {
+            lunchtime = true;
+            period = 3;
+        }
+        if (secondAfy(12, 58, 00) <= sec) {
+            lunchtime = false
+            Passing = true;
+            passingnum = 'c';
+            period = 3;
+            periodsub = 'acl'
+        }
+        if (secondAfy(13, 03, 00) <= sec) {
+            period = 3
+            periodsub = 'acl';
+        }
+    }
+    if (lunch == 'd') {
+        if (secondAfy(11, 28, 00) <= sec) {
+            lunchtime = false
+            Passing = true;
+            passingnum = 2;
+            period = 3;
+        }
+        if (secondAfy(11, 36, 00) <= sec) {
+            Passing = false;
+            period = 3
+            periodsub = 'bdl'
+        }
+        if (secondAfy(12, 59, 00) <= sec) {
+            lunchtime = true;
+        }
+
+    }
+    if (secondAfy(13, 29, 00) <= sec) {
+        lunchtime = false
+        passingnum = 3
+        Passing = true;
+        period = 4;
+    }
+    if (day == 2) {
+        if (secondAfy(13, 37, 00) <= sec) {
+            Passing = false
+            period = "p1";
+        }
+        if (secondAfy(14, 22, 00) <= sec) {
+            Passing = true;
+            passingnum = 'path2';
+            period = "p2";
+        }
+        if (secondAfy(14, 30, 00) <= sec) {
+            Passing = false
+            period = "p2";
+        }
+    } else {
+        if (secondAfy(13, 37, 00) <= sec) {
+            Passing = false
+            period = 4
+        }
+    }
+
+    if (secondAfy(15, 00, 00) < sec || sec > secondAfy(00, 00, 00) && sec < secondAfy(8, 00, 00)) {
+        endofday = true;
+        period = 0;
+    }
+}
+
+function updatescreen(period, time, l, msg) {
+    //period func
+    if (endofday == false) {
+        var percent = Math.abs((current - (end - start)) / (end - start) * 100) + '%';
+    } else {
+        var percent = '100%';
+    }
+    if (day == 0 || endofday == true) {
+        $('#clock').css('display', 'none');
+        $('#time-till-end').css('color', 'var(--firstcolor)')
+        $('#time-till-end').css('font-size', '50px');
+        if (!$('.time-till-end').hasClass('end')) {
+            $('#time-till-end').addClass('end')
+
+        } if (!$('#info').hasClass('end')) {
+            $('#info').addClass('end')
+        }
+
+    } else {
+        $('#time-till-end').css('color', $('html').css('--basetext'))
+        $('#clock').css('display', 'flex');
+        $('#time-till-end').css('font-size', '40px');
+        $('#time-till-end').removeClass('end')
+        $('#info').removeClass('end')
+    }
+
+    if (day == 1) {
+        if (!$('#day1').hasClass('active')) {
+            $('#day1').toggleClass('active');
+        }
+        if (period == 1) {
+            if (!$('.period1').hasClass('activecircle')) {
+                $('.period1').toggleClass('activecircle');
+            }
+            if ($('.period2').hasClass('activecircle')) {
+                $('.period2').toggleClass('activecircle');
+            }
+            if ($('.period3').hasClass('activecircle')) {
+                $('.period3').toggleClass('activecircle');
+            }
+            if ($('.period4').hasClass('activecircle')) {
+                $('.period4').toggleClass('activecircle');
+            }
+            if ($('.period5').hasClass('activecircle')) {
+                $('.period5').toggleClass('activecircle');
+            }
+            if ($('.period6').hasClass('activecircle')) {
+                $('.period6').toggleClass('activecircle');
+            }
+            if ($('.period7').hasClass('activecircle')) {
+                $('.period7').toggleClass('activecircle');
+            }
+            if ($('.period8').hasClass('activecircle')) {
+                $('.period8').toggleClass('activecircle');
+            }
+        }
+        if (period == 2) {
+            if ($('.period1').hasClass('activecircle')) {
+                $('.period1').toggleClass('activecircle');
+            }
+            if (!$('.period2').hasClass('activecircle')) {
+                $('.period2').toggleClass('activecircle');
+            }
+            if ($('.period3').hasClass('activecircle')) {
+                $('.period3').toggleClass('activecircle');
+            }
+            if ($('.period4').hasClass('activecircle')) {
+                $('.period4').toggleClass('activecircle');
+            }
+            if ($('.period5').hasClass('activecircle')) {
+                $('.period5').toggleClass('activecircle');
+            }
+            if ($('.period6').hasClass('activecircle')) {
+                $('.period6').toggleClass('activecircle');
+            }
+            if ($('.period7').hasClass('activecircle')) {
+                $('.period7').toggleClass('activecircle');
+            }
+            if ($('.period8').hasClass('activecircle')) {
+                $('.period8').toggleClass('activecircle');
+            }
+        }
+        if (period == 3) {
+            if ($('.period1').hasClass('activecircle')) {
+                $('.period1').toggleClass('activecircle');
+            }
+            if ($('.period2').hasClass('activecircle')) {
+                $('.period2').toggleClass('activecircle');
+            }
+            if (!$('.period3').hasClass('activecircle')) {
+                $('.period3').toggleClass('activecircle');
+            }
+            if ($('.period4').hasClass('activecircle')) {
+                $('.period4').toggleClass('activecircle');
+            }
+            if ($('.period5').hasClass('activecircle')) {
+                $('.period5').toggleClass('activecircle');
+            }
+            if ($('.period6').hasClass('activecircle')) {
+                $('.period6').toggleClass('activecircle');
+            }
+            if ($('.period7').hasClass('activecircle')) {
+                $('.period7').toggleClass('activecircle');
+            }
+            if ($('.period8').hasClass('activecircle')) {
+                $('.period8').toggleClass('activecircle');
+            }
+        }
+        if (period == 4) {
+            if ($('.period1').hasClass('activecircle')) {
+                $('.period1').toggleClass('activecircle');
+            }
+            if ($('.period2').hasClass('activecircle')) {
+                $('.period2').toggleClass('activecircle');
+            }
+            if ($('.period3').hasClass('activecircle')) {
+                $('.period3').toggleClass('activecircle');
+            }
+            if (!$('.period4').hasClass('activecircle')) {
+                $('.period4').toggleClass('activecircle');
+            }
+            if ($('.period5').hasClass('activecircle')) {
+                $('.period5').toggleClass('activecircle');
+            }
+            if ($('.period6').hasClass('activecircle')) {
+                $('.period6').toggleClass('activecircle');
+            }
+            if ($('.period7').hasClass('activecircle')) {
+                $('.period7').toggleClass('activecircle');
+            }
+            if ($('.period8').hasClass('activecircle')) {
+                $('.period8').toggleClass('activecircle');
+            }
+        }
+    }
+    if (day == 2) {
+        if (!$('#day2').hasClass('active')) {
+            $('#day2').toggleClass('active');
+        }
+        if (period == 1) {
+            if ($('.period1').hasClass('activecircle')) {
+                $('.period1').toggleClass('activecircle');
+            }
+            if ($('.period2').hasClass('activecircle')) {
+                $('.period2').toggleClass('activecircle');
+            }
+            if ($('.period3').hasClass('activecircle')) {
+                $('.period3').toggleClass('activecircle');
+            }
+            if ($('.period4').hasClass('activecircle')) {
+                $('.period4').toggleClass('activecircle');
+            }
+            if (!$('.period5').hasClass('activecircle')) {
+                $('.period5').toggleClass('activecircle');
+            }
+            if ($('.period6').hasClass('activecircle')) {
+                $('.period6').toggleClass('activecircle');
+            }
+            if ($('.period7').hasClass('activecircle')) {
+                $('.period7').toggleClass('activecircle');
+            }
+            if ($('.period8').hasClass('activecircle')) {
+                $('.period8').toggleClass('activecircle');
+            }
+        }
+        if (period == 2) {
+            if ($('.period1').hasClass('activecircle')) {
+                $('.period1').toggleClass('activecircle');
+            }
+            if ($('.period2').hasClass('activecircle')) {
+                $('.period2').toggleClass('activecircle');
+            }
+            if ($('.period3').hasClass('activecircle')) {
+                $('.period3').toggleClass('activecircle');
+            }
+            if ($('.period4').hasClass('activecircle')) {
+                $('.period4').toggleClass('activecircle');
+            }
+            if ($('.period5').hasClass('activecircle')) {
+                $('.period5').toggleClass('activecircle');
+            }
+            if (!$('.period6').hasClass('activecircle')) {
+                $('.period6').toggleClass('activecircle');
+            }
+            if ($('.period7').hasClass('activecircle')) {
+                $('.period7').toggleClass('activecircle');
+            }
+            if ($('.period8').hasClass('activecircle')) {
+                $('.period8').toggleClass('activecircle');
+            }
+        }
+        if (period == 3) {
+            if ($('.period1').hasClass('activecircle')) {
+                $('.period1').toggleClass('activecircle');
+            }
+            if ($('.period2').hasClass('activecircle')) {
+                $('.period2').toggleClass('activecircle');
+            }
+            if ($('.period3').hasClass('activecircle')) {
+                $('.period3').toggleClass('activecircle');
+            }
+            if ($('.period4').hasClass('activecircle')) {
+                $('.period4').toggleClass('activecircle');
+            }
+            if ($('.period5').hasClass('activecircle')) {
+                $('.period5').toggleClass('activecircle');
+            }
+            if ($('.period6').hasClass('activecircle')) {
+                $('.period6').toggleClass('activecircle');
+            }
+            if (!$('.period7').hasClass('activecircle')) {
+                $('.period7').toggleClass('activecircle');
+            }
+            if ($('.period8').hasClass('activecircle')) {
+                $('.period8').toggleClass('activecircle');
+            }
+        }
+        if (period == 4) {
+            if ($('.period1').hasClass('activecircle')) {
+                $('.period1').toggleClass('activecircle');
+            }
+            if ($('.period2').hasClass('activecircle')) {
+                $('.period2').toggleClass('activecircle');
+            }
+            if ($('.period3').hasClass('activecircle')) {
+                $('.period3').toggleClass('activecircle');
+            }
+            if ($('.period4').hasClass('activecircle')) {
+                $('.period4').toggleClass('activecircle');
+            }
+            if ($('.period5').hasClass('activecircle')) {
+                $('.period5').toggleClass('activecircle');
+            }
+            if ($('.period6').hasClass('activecircle')) {
+                $('.period6').toggleClass('activecircle');
+            }
+            if ($('.period7').hasClass('activecircle')) {
+                $('.period7').toggleClass('activecircle');
+            }
+            if (!$('.period8').hasClass('activecircle')) {
+                $('.period8').toggleClass('activecircle');
+            }
+        }
+    }
+    $('.clockprogress').css('width', percent);
+    $('#info').text(msg);
+    $('#time-till-end').text(time);
+}
+
+function timeAfy(seconds) {
+    var convert = function (x) { return (x < 10) ? "0" + x : x; }
+    return convert(parseInt(seconds / (60 * 60))) + ":" +
+        convert(parseInt(seconds / 60 % 60)) + ":" +
+        convert(seconds % 60)
+}
+
+function secondAfy(hour, min, sec, a) {
+    var x;
+    if (a == 'am') {
+        if (hour == 12) {
+            x = 0
+        } else {
+            x = (hour * 60) * 60;
+        }
+    } else if (a == 'pm') {
+        if (hour == 12) {
+            x = (12 * 60) * 60;
+        } else {
+            x = (+(parseInt(hour, 10) + +12) * 60) * 60;
+        }
+
+    } else {
+        x = (hour * 60) * 60;
+    }
+    var y = (min * 60);
+    var z = sec;
+    var f = (parseInt(x, 10) + parseInt(y, 10) + parseInt(z, 10));
+    return (f);
+}
+
+function lunchfunc(input) {
+    if (input == 'var') {
+        var local = localStorage.getItem('setup')
+        if (local == '2') {
+            var l = localStorage.getItem('lunch')
+            $('.lunch' + l).addClass('activecircle');
+            $('.lunch' + l).toggleClass('hoveraffect');
+            return localStorage.getItem('lunch');
+        } else {
+            localStorage.setItem('setup', 2);
+            localStorage.setItem('lunch', 'a');
+            $('.luncha').addClass('activecircle');
+            $('.luncha').toggleClass('hoveraffect');
+            return 'a';
+        }
+    } else {
+        if (input != lunch) {
+            $('.lunch' + lunch).toggleClass('activecircle');
+            $('.lunch' + lunch).toggleClass('hoveraffect');
+            $('.lunch' + input).toggleClass('activecircle');
+            $('.lunch' + input).toggleClass('hoveraffect');
+            lunch = input;
+            localStorage.setItem('lunch', lunch)
+        }
+    }
+
+}
+
+function clockAfy(timein) {
+    return timein.substring(0, 2) + ':' + timein.substring(2, 4) + ':' + timein.substring(4, 6)
+}
+
+function opencolor(o) {
+    if (o == "click" && colorview == 1) {
+        $('.colorbtn').removeClass('active');
+        $('.pickerholder').removeClass('active');
+        colorview = 0;
+    }
+    if (colorview == 0) {
+        $('.colorbtn').addClass('active');
+        $('.pickerholder').addClass('active');
+        colorview = 1;
+    } else {
+        $('.colorbtn').removeClass('active');
+        $('.pickerholder').removeClass('active');
+        colorview = 0;
+    }
+}
+
+function setColor(hex) {
+    if (hex == 'start') {
+        return getColor();
+    } else {
+        $('html').css('--firstcolor', hex);
+        localStorage.setItem('color', hex);
+        return hex;
+    }
+}
+
+function getColor() {
+    var local = localStorage.getItem('setupcolor')
+    if (local == 2) {
+        $('html').css('--firstcolor', localStorage.getItem('color'))
+        return localStorage.getItem('color');
+    } else {
+        localStorage.setItem('setupcolor', 2);
+        localStorage.setItem('color', '#DC6985');
+        return '#DC6985';
+    }
+}
+
+function progressSet(input) {
+    if (input != progresstheme && input != 'get') {
+        if (!$(progresstheme).hasClass('no')) {
+            $(progresstheme).removeClass('activeselector')
+            $(progresstheme).addClass('no')
+            $(input).removeClass('no')
+            $(input).addClass('activeselector')
+            progresstheme = input;
+            localStorage.setItem('currenttheme', input)
+        }
+        if (input == '.selector1') {
+            $('.item').addClass('boxshadow');
+            $('.periodcircles').addClass('boxshadow')
+            $('.pickerholder').addClass('boxshadow')
+            $('.colorbtn').addClass('boxshadow')
+            $('.clockbar').addClass('boxshadow')
+            $('.clockprogress').addClass('boxshadow')
+        }
+        if (input == '.selector3') {
+            $('.item').removeClass('boxshadow');
+            $('.periodcircles').removeClass('boxshadow');
+            $('.pickerholder').removeClass('boxshadow');
+            $('.colorbtn').removeClass('boxshadow')
+            $('.clockbar').removeClass('boxshadow')
+            $('.clockprogress').removeClass('boxshadow')
+        }
+    }
+    if (input == 'get') {
+        var l = localStorage.getItem('verifytheme')
+        if (l == 'true') {
+            setprogress(localStorage.getItem('currenttheme'));
+            return localStorage.getItem('currenttheme')
+
+        } else {
+            localStorage.setItem('verifytheme', true)
+            localStorage.setItem('currenttheme', '.selector3')
+            setprogress('.selector3');
+            return localStorage.getItem('currenttheme')
+        }
+    }
+
+}
+
+function setprogress(prog) {
+    $(prog).addClass('activeselector');
+    $(prog).removeClass('no');
+    if (prog == '.selector1') {
+        $('.item').addClass('boxshadow');
+        $('.periodcircles').addClass('boxshadow')
+        $('.pickerholder').addClass('boxshadow')
+        $('.colorbtn').addClass('boxshadow')
+        $('.clockbar').addClass('boxshadow')
+        $('.clockprogress').addClass('boxshadow')
+    }
+}
+
+function backgroundw(type) {
+    if (type == 'get') {
+        var local = localStorage.getItem('background')
+        if (local) {
+            if (local == 'base') {
+                $('body').css('background', 'var(--backgroundcolor)')
+                $('.base').addClass('activeback')
+            }
+            else if (local == 'mountain-ice') {
+                $('body').css({ 'background': 'url(/img/mountain.jpg)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center' })
+                $('.mountain-ice').addClass('activeback')
+            }
+            else if (local == 'mountain-app') {
+                $('body').css({ 'background': 'url(/img/mountain2.jpg)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center' })
+                $('.mountain-app').addClass('activeback')
+            }
+            else if (local == 'forest') {
+                $('body').css({ 'background': 'url(/img/forest.jpg)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center' })
+                $('.forest').addClass('activeback')
+            }
+            else {
+                localStorage.removeItem('background')
+                localStorage.removeItem('setupbackground')
+                localStorage.setItem('setupbackground', 'base')
+                $('body').css('background', 'var(--backgroundcolor)')
+                $('.base').addClass('activeback')
+            }
+        } else {
+            localStorage.setItem('background', 'base')
+        }
+    } else {
+        localStorage.setItem('background', type)
+        if (type == 'base') {
+            $('body').css('background', 'var(--backgroundcolor)')
+            if ($('.mountain-ice').hasClass('activeback')) {
+                $('.mountain-ice').removeClass('activeback')
+            }
+            if ($('.mountain-app').hasClass('activeback')) {
+                $('.mountain-app').removeClass('activeback')
+            }
+            if ($('.forest').hasClass('activeback')) {
+                $('.forest').removeClass('activeback')
+            }
+            $('.base').addClass('activeback')
+        }
+        else if (type == 'mountain-ice') {
+            $('body').css({ 'background': 'url(/img/mountain.jpg)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center' })
+            if ($('.base').hasClass('activeback')) {
+                $('.base').removeClass('activeback')
+            }
+            if ($('.mountain-app').hasClass('activeback')) {
+                $('.mountain-app').removeClass('activeback')
+            }
+            if ($('.forest').hasClass('activeback')) {
+                $('.forest').removeClass('activeback')
+            }
+            $('.mountain-ice').addClass('activeback')
+        }
+        else if (type == 'mountain-app') {
+            $('body').css({ 'background': 'url(/img/mountain2.jpg)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center' })
+            if ($('.base').hasClass('activeback')) {
+                $('.base').removeClass('activeback')
+            }
+            if ($('.mountain-ice').hasClass('activeback')) {
+                $('.mountain-ice').removeClass('activeback')
+            }
+            if ($('.forest').hasClass('activeback')) {
+                $('.forest').removeClass('activeback')
+            }
+            $('.mountain-app').addClass('activeback')
+        }
+        else if (type == 'forest') {
+            $('body').css({ 'background': 'url(/img/forest.jpg)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center' })
+            if ($('.base').hasClass('activeback')) {
+                $('.base').removeClass('activeback')
+            }
+            if ($('.mountain-ice').hasClass('activeback')) {
+                $('.mountain-ice').removeClass('activeback')
+            }
+            if ($('.mountain-app').hasClass('activeback')) {
+                $('.mountain-app').removeClass('activeback')
+            }
+            $('.forest').addClass('activeback')
+        }
+    }
+}
+
