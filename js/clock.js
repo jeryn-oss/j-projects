@@ -12,7 +12,7 @@ colorPicker.on('color:change', function (color) {
     // log the current color as a HEX string
     setColor((color.hexString));
 });
-
+startloader();
 var time;
 const t = setInterval(clock, 180);
 var period = 0;
@@ -123,6 +123,38 @@ var days = {
         29: 0,
         30: 0,
     },
+    Nov:{
+        1:1,
+        2:2,
+        3:1,
+        4:2,
+        5:0,
+        6:0,
+        7:1,
+        8:2,
+        9:1,
+        10:2,
+        11:1,
+        12:0,
+        13:0,
+        14:2,
+        15:1,
+        16:2,
+        17:1,
+        18:2,
+        19:0,   
+        20:0,
+        21:1,
+        22:2,
+        23:1,
+        24:2,
+        25:1,
+        26:0,
+        27:0,
+        28:2,
+        29:1,
+        30:2,
+    },
     Dec:
     {
         1: 1,
@@ -216,7 +248,7 @@ var days = {
 var colorview = 0;
 day = getdaynum();
 
-startloader();
+
 function startloader() {
     setInterval(() => {
         $('.loader').css('opacity', 0)
@@ -226,10 +258,8 @@ function startloader() {
             }
         }, 400);
     }, 3000);
+
 }
-
-
-
 
 getdaynum();
 function getdaynum() {
